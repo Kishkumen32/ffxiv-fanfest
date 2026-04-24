@@ -33,10 +33,23 @@ const EVENT_SCHEDULE = [
 
 const EVENT_MAP = Object.fromEntries(EVENT_SCHEDULE.map((event) => [event.key, event]));
 const BINGO_STORAGE_KEY = "ffxiv-fanfest-2026-bingo-state";
+const STREAM_MODE = {
+  LIVE_EMBED: "live-embed",
+  LIVE_FALLBACK: "live-fallback",
+  UPCOMING: "upcoming",
+  ENDED: "ended"
+};
 
-let bingoData = { items: [] };
-let selectedStreamKey = chooseInitialStreamKey();
-let streamSelectionPinned = false;
+const appState = {
+  bingoData: { items: [] },
+  liveblogData: { entries: [] },
+  selectedStreamKey: chooseInitialStreamKey(),
+  streamSelectionPinned: false,
+  streamPanelElement: null,
+  streamButtons: [],
+  streamViews: new Map(),
+  activeStreamKey: null
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   initialize().catch((error) => {
@@ -50,22 +63,24 @@ async function initialize() {
     loadJson("./liveblog.json", "liveblog-data-fallback")
   ]);
 
-  bingoData = loadedBingoData ?? { items: [] };
+  appState.bingoData = loadedBingoData ?? { items: [] };
+  appState.liveblogData = liveblogData ?? { entries: [] };
+  appState.streamPanelElement = document.getElementById("stream-panel");
+  appState.streamButtons = Array.from(document.querySelectorAll("[data-stream-selector]"));
 
   bindStreamSelector();
   bindBingoReset();
+  initializeStreamPanel();
   renderCountdowns();
-  renderStreamPanel();
+  refreshStreamPanel({ force: true });
   renderBingoGrid();
-  renderLiveblog(liveblogData ?? { entries: [] });
+  renderLiveblog(appState.liveblogData);
+
+  document.body.classList.add("is-ready");
 
   window.setInterval(() => {
     renderCountdowns();
-
-    if (!streamSelectionPinned) {
-      selectedStreamKey = chooseInitialStreamKey();
-      renderStreamPanel();
-    }
+    refreshStreamPanel();
   }, 1000);
 }
 
@@ -148,91 +163,260 @@ function renderCountdowns() {
 }
 
 function bindStreamSelector() {
-  const buttons = document.querySelectorAll("[data-stream-selector]");
+  appState.streamButtons.forEach((button, index) => {
+    button.id = `stream-tab-${button.dataset.streamSelector}`;
+    button.tabIndex = index === 0 ? 0 : -1;
 
-  buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      selectedStreamKey = button.dataset.streamSelector;
-      streamSelectionPinned = true;
-      renderStreamPanel();
+      const nextKey = button.dataset.streamSelector;
+
+      if (!nextKey) {
+        return;
+      }
+
+      appState.selectedStreamKey = nextKey;
+      appState.streamSelectionPinned = true;
+      refreshStreamPanel({ force: false });
+    });
+
+    button.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") {
+        return;
+      }
+
+      event.preventDefault();
+
+      const currentIndex = appState.streamButtons.indexOf(button);
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = (currentIndex + direction + appState.streamButtons.length) % appState.streamButtons.length;
+      const nextButton = appState.streamButtons[nextIndex];
+
+      nextButton.focus();
+      nextButton.click();
     });
   });
 }
 
-function renderStreamPanel() {
-  const panel = document.getElementById("stream-panel");
-  const buttons = document.querySelectorAll("[data-stream-selector]");
-  const event = EVENT_MAP[selectedStreamKey] ?? EVENT_SCHEDULE[0];
-
-  buttons.forEach((button) => {
-    const isActive = button.dataset.streamSelector === event.key;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-selected", String(isActive));
-  });
-
-  if (!panel) {
+function initializeStreamPanel() {
+  if (!appState.streamPanelElement) {
     return;
   }
 
-  if (isEventLive(event)) {
-    const parentHost = getTwitchParentHost();
+  appState.streamPanelElement.innerHTML = "";
+  appState.streamViews.clear();
 
-    if (parentHost) {
-      panel.innerHTML = `
-        <div class="stream-player">
-          <iframe
-            src="https://player.twitch.tv/?channel=finalfantasyxiv&parent=${encodeURIComponent(parentHost)}&muted=true"
-            allowfullscreen
-            scrolling="no"
-            title="${escapeHtml(event.name)} live Twitch stream"
-          ></iframe>
-        </div>
-        <div class="stream-meta">
-          <p class="stream-meta__eyebrow">${escapeHtml(event.region)} live view</p>
-          <h3>${escapeHtml(event.name)} is on the air</h3>
-          <p>${escapeHtml(event.location)} · If the player fails, open the official channel directly on Twitch.</p>
-          <p><a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">Open finalfantasyxiv on Twitch</a></p>
-        </div>
-      `;
+  EVENT_SCHEDULE.forEach((event) => {
+    const viewElement = document.createElement("section");
+    viewElement.className = "stream-view";
+    viewElement.dataset.streamView = event.key;
+    viewElement.id = `stream-view-${event.key}`;
+    viewElement.setAttribute("role", "tabpanel");
+    viewElement.setAttribute("aria-labelledby", `stream-tab-${event.key}`);
+    viewElement.hidden = true;
+
+    const stageElement = document.createElement("div");
+    stageElement.className = "stream-stage";
+
+    const metaElement = document.createElement("article");
+    metaElement.className = "stream-meta-card";
+
+    viewElement.append(stageElement, metaElement);
+    appState.streamPanelElement.append(viewElement);
+
+    appState.streamViews.set(event.key, {
+      event,
+      viewElement,
+      stageElement,
+      metaElement,
+      mode: null,
+      iframeElement: null
+    });
+  });
+}
+
+function refreshStreamPanel({ force = false } = {}) {
+  if (!appState.streamPanelElement) {
+    return;
+  }
+
+  if (!appState.streamSelectionPinned) {
+    appState.selectedStreamKey = chooseInitialStreamKey();
+  }
+
+  syncAllStreamViews(force);
+  applyActiveStreamSelection(force);
+}
+
+function syncAllStreamViews(force) {
+  appState.streamViews.forEach((viewRecord) => {
+    syncStreamView(viewRecord, force);
+  });
+}
+
+function syncStreamView(viewRecord, force) {
+  const nextMode = getStreamMode(viewRecord.event);
+
+  if (!force && viewRecord.mode === nextMode) {
+    return;
+  }
+
+  viewRecord.mode = nextMode;
+  renderStreamStage(viewRecord, nextMode);
+  renderStreamMeta(viewRecord, nextMode);
+}
+
+function renderStreamStage(viewRecord, mode) {
+  if (mode === STREAM_MODE.LIVE_EMBED) {
+    if (!viewRecord.iframeElement) {
+      const parentHost = getTwitchParentHost();
+      const frame = document.createElement("div");
+      frame.className = "stream-frame";
+
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://player.twitch.tv/?channel=finalfantasyxiv&parent=${encodeURIComponent(parentHost)}&muted=true`;
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("scrolling", "no");
+      iframe.title = `${viewRecord.event.name} live Twitch stream`;
+
+      frame.append(iframe);
+      viewRecord.stageElement.replaceChildren(frame);
+      viewRecord.iframeElement = iframe;
       return;
     }
 
-    panel.innerHTML = `
-      <div class="stream-placeholder">
-        <div class="stream-placeholder__content">
-          <div class="stream-placeholder__icon" aria-hidden="true">▶</div>
-          <h3>${escapeHtml(event.name)} is live</h3>
-          <p>
-            Twitch embeds need a valid parent domain. This local file preview falls back to a standby card,
-            but the live embed will activate on GitHub Pages or localhost.
-          </p>
-          <p><a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">Open the official channel now</a></p>
-        </div>
-      </div>
-      <div class="stream-meta">
-        <p class="stream-meta__eyebrow">${escapeHtml(event.region)} live view</p>
-        <h3>Embed ready for deployment</h3>
-        <p>${escapeHtml(event.location)}</p>
-      </div>
-    `;
+    const existingFrame = viewRecord.stageElement.querySelector(".stream-frame");
+
+    if (!existingFrame) {
+      const frame = document.createElement("div");
+      frame.className = "stream-frame";
+      frame.append(viewRecord.iframeElement);
+      viewRecord.stageElement.replaceChildren(frame);
+    }
+
     return;
   }
 
-  panel.innerHTML = `
+  const icon = mode === STREAM_MODE.LIVE_FALLBACK ? "▶" : mode === STREAM_MODE.UPCOMING ? "⏳" : "❄";
+  const title =
+    mode === STREAM_MODE.LIVE_FALLBACK
+      ? `${viewRecord.event.name} is live`
+      : mode === STREAM_MODE.UPCOMING
+        ? `${viewRecord.event.name} stream not live yet`
+        : `${viewRecord.event.name} has wrapped`;
+  const body =
+    mode === STREAM_MODE.LIVE_FALLBACK
+      ? "Twitch embeds need a valid parent hostname. This preview stays clean locally, while the official channel remains one tap away."
+      : mode === STREAM_MODE.UPCOMING
+        ? `Stream starts ${viewRecord.event.streamLabel}. Until then, this standby panel stays intentionally quiet.`
+        : "The live broadcast window has closed. Keep this hub open for countdowns, bingo progress, and liveblog coverage.";
+  const ctaLabel = mode === STREAM_MODE.ENDED ? "Open finalfantasyxiv on Twitch" : "Follow the official channel";
+
+  viewRecord.stageElement.innerHTML = `
     <div class="stream-placeholder">
       <div class="stream-placeholder__content">
-        <div class="stream-placeholder__icon" aria-hidden="true">⏳</div>
-        <h3>${escapeHtml(event.name)} stream not live yet</h3>
-        <p>Stream starts ${escapeHtml(event.streamLabel)}. Until then, this panel stays greyed out on purpose.</p>
-        <p><a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">Follow the official channel</a></p>
+        <div class="stream-placeholder__icon" aria-hidden="true">${icon}</div>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(body)}</p>
+        <p>
+          <a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">${escapeHtml(ctaLabel)}</a>
+        </p>
       </div>
     </div>
-    <div class="stream-meta">
-      <p class="stream-meta__eyebrow">${escapeHtml(event.region)} standby</p>
-      <h3>${escapeHtml(event.dates)}</h3>
-      <p>${escapeHtml(event.location)}</p>
-    </div>
   `;
+}
+
+function renderStreamMeta(viewRecord, mode) {
+  const event = viewRecord.event;
+  const statusLabel =
+    mode === STREAM_MODE.LIVE_EMBED || mode === STREAM_MODE.LIVE_FALLBACK
+      ? "Live now"
+      : mode === STREAM_MODE.UPCOMING
+        ? "Standby"
+        : "VOD / recap";
+  const heading =
+    mode === STREAM_MODE.LIVE_EMBED
+      ? `${event.name} is on the air`
+      : mode === STREAM_MODE.LIVE_FALLBACK
+        ? "Local preview mode"
+        : mode === STREAM_MODE.UPCOMING
+          ? `${event.name} countdown`
+          : `${event.name} recap window`;
+  const description =
+    mode === STREAM_MODE.LIVE_EMBED
+      ? `${event.location} · Stable embed loaded once and held in place while the timer updates.`
+      : mode === STREAM_MODE.LIVE_FALLBACK
+        ? `${event.location} · Deploy to GitHub Pages or any real hostname to activate the embedded Twitch player.`
+        : mode === STREAM_MODE.UPCOMING
+          ? `${event.location} · ${event.dates}`
+          : `${event.location} · Broadcast window complete.`;
+
+  viewRecord.metaElement.innerHTML = `
+    <div class="stream-meta-card__header">
+      <p class="stream-meta__eyebrow">${escapeHtml(event.region)} view</p>
+      <span class="stream-meta__status">${escapeHtml(statusLabel)}</span>
+    </div>
+    <h3>${escapeHtml(heading)}</h3>
+    <p>${escapeHtml(description)}</p>
+    <dl class="stream-meta-grid">
+      <div>
+        <dt>Dates</dt>
+        <dd>${escapeHtml(event.dates)}</dd>
+      </div>
+      <div>
+        <dt>Location</dt>
+        <dd>${escapeHtml(event.location)}</dd>
+      </div>
+      <div>
+        <dt>Channel</dt>
+        <dd>
+          <a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">finalfantasyxiv</a>
+        </dd>
+      </div>
+    </dl>
+  `;
+}
+
+function applyActiveStreamSelection(force) {
+  if (!appState.streamPanelElement) {
+    return;
+  }
+
+  if (!force && appState.activeStreamKey === appState.selectedStreamKey) {
+    return;
+  }
+
+  appState.activeStreamKey = appState.selectedStreamKey;
+  appState.streamPanelElement.dataset.streamSelected = appState.selectedStreamKey;
+
+  appState.streamButtons.forEach((button) => {
+    const isActive = button.dataset.streamSelector === appState.selectedStreamKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+    button.tabIndex = isActive ? 0 : -1;
+  });
+
+  appState.streamViews.forEach((viewRecord, key) => {
+    const isActive = key === appState.selectedStreamKey;
+    viewRecord.viewElement.hidden = !isActive;
+    viewRecord.viewElement.classList.toggle("is-active", isActive);
+  });
+}
+
+function getStreamMode(event) {
+  const now = new Date();
+  const start = new Date(event.start);
+  const end = new Date(event.end);
+  const parentHost = getTwitchParentHost();
+
+  if (now >= start && now <= end) {
+    return parentHost ? STREAM_MODE.LIVE_EMBED : STREAM_MODE.LIVE_FALLBACK;
+  }
+
+  if (now < start) {
+    return STREAM_MODE.UPCOMING;
+  }
+
+  return STREAM_MODE.ENDED;
 }
 
 function bindBingoReset() {
@@ -255,10 +439,11 @@ function renderBingoGrid() {
     return;
   }
 
-  const items = Array.isArray(bingoData.items) ? bingoData.items : [];
+  const items = Array.isArray(appState.bingoData.items) ? appState.bingoData.items : [];
 
   if (!items.length) {
     grid.innerHTML = '<div class="empty-state"><p>No bingo squares found.</p></div>';
+    updateBingoProgress(items, {});
     return;
   }
 
@@ -290,6 +475,8 @@ function renderBingoGrid() {
     })
     .join("");
 
+  updateBingoProgress(items, savedState);
+
   grid.querySelectorAll("[data-bingo-id]").forEach((button) => {
     button.addEventListener("click", () => {
       const squareId = button.dataset.bingoId;
@@ -302,6 +489,18 @@ function renderBingoGrid() {
       renderBingoGrid();
     });
   });
+}
+
+function updateBingoProgress(items, savedState) {
+  const progressElement = document.getElementById("bingo-progress");
+
+  if (!progressElement) {
+    return;
+  }
+
+  const total = items.length;
+  const checked = items.filter((item) => savedState[item.id] ?? Boolean(item.free)).length;
+  progressElement.textContent = `${checked} / ${total} marked`;
 }
 
 function readBingoState() {
@@ -321,6 +520,7 @@ function readBingoState() {
 
 function renderLiveblog(liveblogData) {
   const feed = document.getElementById("liveblog-feed");
+  const updatedElement = document.getElementById("liveblog-updated");
 
   if (!feed) {
     return;
@@ -329,6 +529,12 @@ function renderLiveblog(liveblogData) {
   const entries = Array.isArray(liveblogData.entries) ? [...liveblogData.entries] : [];
 
   entries.sort((left, right) => new Date(right.timestamp).getTime() - new Date(left.timestamp).getTime());
+
+  if (updatedElement) {
+    updatedElement.textContent = liveblogData.updatedAt
+      ? `Updated ${formatTimestamp(liveblogData.updatedAt)}`
+      : "Waiting for the next update";
+  }
 
   if (!entries.length) {
     feed.innerHTML = `
@@ -342,19 +548,55 @@ function renderLiveblog(liveblogData) {
 
   feed.innerHTML = entries
     .map((entry) => {
-      const title = entry.title || "Update";
-      const content = entry.content || "";
+      const title = entry.headline || entry.title || "Update";
+      const content = entry.body || entry.content || "";
       const timestamp = entry.timestamp ? formatTimestamp(entry.timestamp) : "Timestamp pending";
+      const sentiment = entry.sentiment ? renderSentimentChip(entry.sentiment) : "";
+      const sources = Array.isArray(entry.sources) && entry.sources.length ? renderSourceList(entry.sources) : "";
 
       return `
         <article class="liveblog-entry">
-          <time datetime="${escapeAttribute(entry.timestamp || "")}">${escapeHtml(timestamp)}</time>
+          <div class="liveblog-entry__header">
+            <time datetime="${escapeAttribute(entry.timestamp || "")}">${escapeHtml(timestamp)}</time>
+            ${sentiment}
+          </div>
           <h3>${escapeHtml(title)}</h3>
           <p>${escapeHtml(content)}</p>
+          ${sources}
         </article>
       `;
     })
     .join("");
+}
+
+function renderSentimentChip(sentiment) {
+  const normalized = String(sentiment).toLowerCase();
+  const modifier = ["positive", "mixed", "neutral", "negative"].includes(normalized) ? normalized : "neutral";
+
+  return `<span class="liveblog-chip liveblog-chip--${modifier}">${escapeHtml(sentiment)}</span>`;
+}
+
+function renderSourceList(sources) {
+  const items = sources
+    .map((source) => {
+      const label = formatSourceLabel(source);
+      return `
+        <li>
+          <a href="${escapeAttribute(source)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>
+        </li>
+      `;
+    })
+    .join("");
+
+  return `<ul class="liveblog-sources">${items}</ul>`;
+}
+
+function formatSourceLabel(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./u, "");
+  } catch {
+    return url;
+  }
 }
 
 function chooseInitialStreamKey() {
@@ -413,12 +655,7 @@ function formatTimestamp(value) {
 
 function getTwitchParentHost() {
   const { hostname } = window.location;
-
-  if (!hostname || hostname === "localhost" || hostname === "127.0.0.1") {
-    return null;
-  }
-
-  return hostname;
+  return hostname || null;
 }
 
 function escapeHtml(value) {

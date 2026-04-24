@@ -27,28 +27,62 @@
       <header class="hero">
         <div class="hero__backdrop" aria-hidden="true"></div>
         <div class="hero__content container">
-          <p class="eyebrow">FFXIV EVERCOLD · Fanfest 2026</p>
-          <img
-            class="evercold-logo"
-            src="./assets/images/evercold-logo.png"
-            alt="Final Fantasy XIV Evercold logo"
-          />
-          <h1>The cold never stops. Neither do we.</h1>
-          <p class="hero__lede">
-            The Godless Realms Saga begins. Track every Fanfest stop, watch the official
-            stream, and play expansion prediction bingo while Evercold freezes the horizon.
-          </p>
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <p class="eyebrow">FFXIV EVERCOLD · Fanfest 2026</p>
+              <img
+                class="evercold-logo"
+                src="./assets/images/evercold-logo.png"
+                alt="Final Fantasy XIV Evercold logo"
+              />
+              <h1>The cold never stops. Neither do we.</h1>
+              <p class="hero__lede">
+                The Godless Realms Saga begins. Track every Fanfest stop, watch the official
+                stream, and play expansion prediction bingo while Evercold freezes the horizon.
+              </p>
 
-          <div class="hero__actions">
-            <a class="button button--primary" href="#stream-section">Watch stream</a>
-            <a class="button button--secondary" href="#bingo-section">Open bingo card</a>
+              <div class="hero__actions">
+                <a class="button button--primary" href="#stream-section">Watch stream</a>
+                <a class="button button--secondary" href="#bingo-section">Open bingo card</a>
+              </div>
+
+              <ul class="hero__meta" aria-label="Event locations">
+                <li>Anaheim Convention Center</li>
+                <li>Messe Berlin, hub27</li>
+                <li>Makuhari Messe, Tokyo</li>
+              </ul>
+            </div>
+
+            <aside class="hero__visual-card" aria-label="Evercold key art and site summary">
+              <div class="hero__visual-badge">NA stream live now</div>
+              <img
+                class="hero__artwork"
+                src="./assets/images/evercold-artwork.png"
+                alt="Final Fantasy XIV Evercold key artwork"
+              />
+              <div class="hero__visual-copy">
+                <p class="hero__visual-title">The Fourth is freezing over.</p>
+                <p>
+                  Follow the reveal in real time, watch the keynote without flicker, and keep the
+                  prediction board close while the expansion details land.
+                </p>
+              </div>
+              <div class="hero__stats" aria-label="Site overview">
+                <div class="hero__stat">
+                  <span class="hero__stat-value">3</span>
+                  <span class="hero__stat-label">Fanfest stops</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-value">25</span>
+                  <span class="hero__stat-label">Bingo squares</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-value">Jan 2027</span>
+                  <span class="hero__stat-label">Evercold launch</span>
+                </div>
+              </div>
+            </aside>
           </div>
-
-          <ul class="hero__meta" aria-label="Event locations">
-            <li>Anaheim Convention Center</li>
-            <li>Messe Berlin, hub27</li>
-            <li>Makuhari Messe, Tokyo</li>
-          </ul>
         </div>
       </header>
 
@@ -157,6 +191,7 @@
 
           <div class="bingo-toolbar">
             <p class="bingo-toolbar__note">Center square starts marked, because Yoshi-P is inevitable.</p>
+            <p id="bingo-progress" class="bingo-toolbar__progress" aria-live="polite">Checking card progress…</p>
             <button id="bingo-reset" class="button button--secondary" type="button">Reset card</button>
           </div>
 
@@ -169,9 +204,12 @@
               <p class="eyebrow">Rapid updates</p>
               <h2 id="liveblog-title">Liveblog feed</h2>
             </div>
-            <p class="section-copy">
+            <div class="section-heading__meta">
+              <p class="section-copy">
               Entries are loaded from <code>liveblog.json</code> and rendered newest first. Start empty, then publish updates by editing JSON.
-            </p>
+              </p>
+              <p id="liveblog-updated" class="section-meta-note" aria-live="polite"></p>
+            </div>
           </div>
 
           <div id="liveblog-feed" class="liveblog-feed" aria-live="polite"></div>
