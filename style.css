@@ -215,6 +215,8 @@ select {
 
 .hero__visual-badge {
   justify-self: start;
+  align-self: start;
+  height: fit-content;
   padding: 0.45rem 0.8rem;
   border: 1px solid rgba(119, 221, 119, 0.32);
   border-radius: 999px;
