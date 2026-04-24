@@ -98,6 +98,7 @@ async function initialize() {
   bindStreamSelector();
   bindLiveblogSelector();
   bindBingoReset();
+  bindHeroTrailer();
   initializeStreamPanel();
   renderCountdowns();
   refreshStreamPanel({ force: true });
@@ -495,6 +496,52 @@ function bindBingoReset() {
   resetButton.addEventListener("click", () => {
     localStorage.removeItem(BINGO_STORAGE_KEY);
     renderBingoGrid();
+  });
+}
+
+function bindHeroTrailer() {
+  const trailerElement = document.querySelector("[data-hero-trailer]");
+  const posterButton = trailerElement?.querySelector("[data-hero-trailer-poster]");
+  const playerElement = trailerElement?.querySelector("[data-hero-trailer-player]");
+
+  if (!trailerElement || !posterButton || !playerElement) {
+    return;
+  }
+
+  posterButton.addEventListener("click", () => {
+    if (trailerElement.classList.contains("is-loading") || trailerElement.classList.contains("is-loaded")) {
+      return;
+    }
+
+    const embedSrc = trailerElement.dataset.embedSrc;
+    const videoTitle = trailerElement.dataset.videoTitle || "YouTube video player";
+
+    if (!embedSrc) {
+      return;
+    }
+
+    trailerElement.classList.add("is-loading");
+    playerElement.hidden = false;
+
+    const iframe = document.createElement("iframe");
+    iframe.className = "hero__trailer-frame";
+    iframe.src = embedSrc;
+    iframe.title = videoTitle;
+    iframe.loading = "eager";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.allowFullscreen = true;
+
+    iframe.addEventListener(
+      "load",
+      () => {
+        trailerElement.classList.remove("is-loading");
+        trailerElement.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+
+    playerElement.replaceChildren(iframe);
   });
 }
 
