@@ -25,7 +25,6 @@
     { "id": "fate-log-system", "text": "Fate Log / Merit Point system", "free": false },
     { "id": "5-dungeons-launch", "text": "5+ dungeons at launch", "free": false },
     { "id": "new-gameplay-system", "text": "Completely new gameplay system revealed", "free": false },
-    { "id": "yoshi-p-wears-scarf", "text": "Yoshi-P wears a scarf (or costume)", "free": false },
     { "id": "gunshield-tank", "text": "New job: Gunshield Tank (Rhitahtyn-inspired)", "free": false }
   ]
 }
