@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FFXIV Evercold Fanfest 2026 Watch Hub</title>
+    <meta
+      name="description"
+      content="Track every FFXIV Evercold Fanfest 2026 stop with live countdowns, stream status, prediction bingo, and a liveblog-ready watch hub."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307111e'/%3E%3Cpath d='M16 20h32v6H34v8h10v6H34v14h-8V20z' fill='%237ec8e3'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__backdrop" aria-hidden="true"></div>
+        <div class="hero__content container">
+          <p class="eyebrow">FFXIV EVERCOLD · Fanfest 2026</p>
+          <img
+            class="evercold-logo"
+            src="./assets/images/evercold-logo.png"
+            alt="Final Fantasy XIV Evercold logo"
+          />
+          <h1>The cold never stops. Neither do we.</h1>
+          <p class="hero__lede">
+            The Godless Realms Saga begins. Track every Fanfest stop, watch the official
+            stream, and play expansion prediction bingo while Evercold freezes the horizon.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#stream-section">Watch stream</a>
+            <a class="button button--secondary" href="#bingo-section">Open bingo card</a>
+          </div>
+
+          <ul class="hero__meta" aria-label="Event locations">
+            <li>Anaheim Convention Center</li>
+            <li>Messe Berlin, hub27</li>
+            <li>Makuhari Messe, Tokyo</li>
+          </ul>
+        </div>
+      </header>
+
+      <main id="main-content" class="container stack-xl">
+        <section class="panel stack-md" aria-labelledby="countdowns-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Countdown board</p>
+              <h2 id="countdowns-title">Fanfest schedule tracker</h2>
+            </div>
+            <p class="section-copy">
+              Live cards flip automatically when an event window starts. NA should already be live today.
+            </p>
+          </div>
+
+          <div class="event-grid">
+            <article class="event-card" data-event-key="na">
+              <div class="event-card__topline">
+                <p class="event-card__label">North America</p>
+                <span class="status-pill" data-event-status>Checking…</span>
+              </div>
+              <h3>NA Fanfest</h3>
+              <p class="event-card__location">Anaheim Convention Center · April 24–25, 2026</p>
+              <p class="event-card__countdown" data-event-countdown>--:--:--:--</p>
+              <p class="event-card__meta" data-event-meta>Anaheim, California</p>
+            </article>
+
+            <article class="event-card" data-event-key="eu">
+              <div class="event-card__topline">
+                <p class="event-card__label">Europe</p>
+                <span class="status-pill" data-event-status>Checking…</span>
+              </div>
+              <h3>EU Fanfest</h3>
+              <p class="event-card__location">Messe Berlin, hub27 · July 25–26, 2026</p>
+              <p class="event-card__countdown" data-event-countdown>--:--:--:--</p>
+              <p class="event-card__meta" data-event-meta>Berlin, Germany</p>
+            </article>
+
+            <article class="event-card" data-event-key="jp">
+              <div class="event-card__topline">
+                <p class="event-card__label">Japan</p>
+                <span class="status-pill" data-event-status>Checking…</span>
+              </div>
+              <h3>JP Fanfest</h3>
+              <p class="event-card__location">Makuhari Messe · October 31–November 1, 2026</p>
+              <p class="event-card__countdown" data-event-countdown>--:--:--:--</p>
+              <p class="event-card__meta" data-event-meta>Tokyo, Japan</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="stream-section" class="panel stack-md" aria-labelledby="stream-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Official broadcast</p>
+              <h2 id="stream-title">Twitch stream control room</h2>
+            </div>
+            <p class="section-copy">
+              The live event is selected automatically. Upcoming stops show a grey standby panel until broadcast time.
+            </p>
+          </div>
+
+          <div class="stream-selector" role="tablist" aria-label="Select Fanfest stream view">
+            <button
+              class="stream-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-stream-selector="na"
+            >
+              NA
+            </button>
+            <button
+              class="stream-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-stream-selector="eu"
+            >
+              EU
+            </button>
+            <button
+              class="stream-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-stream-selector="jp"
+            >
+              JP
+            </button>
+          </div>
+
+          <div id="stream-panel" class="stream-panel" aria-live="polite"></div>
+        </section>
+
+        <section id="bingo-section" class="panel stack-md" aria-labelledby="bingo-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Leak-watch game</p>
+              <h2 id="bingo-title">Fanfest bingo card</h2>
+            </div>
+            <p class="section-copy">
+              Click squares as predictions land. Progress is saved in your browser so the card survives refreshes.
+            </p>
+          </div>
+
+          <div class="bingo-toolbar">
+            <p class="bingo-toolbar__note">Center square starts marked, because Yoshi-P is inevitable.</p>
+            <button id="bingo-reset" class="button button--secondary" type="button">Reset card</button>
+          </div>
+
+          <div id="bingo-grid" class="bingo-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="panel stack-md" aria-labelledby="liveblog-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Rapid updates</p>
+              <h2 id="liveblog-title">Liveblog feed</h2>
+            </div>
+            <p class="section-copy">
+              Entries are loaded from <code>liveblog.json</code> and rendered newest first. Start empty, then publish updates by editing JSON.
+            </p>
+          </div>
+
+          <div id="liveblog-feed" class="liveblog-feed" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer container">
+        <p>
+          FFXIV EVERCOLD arrives January 2027 · Fan-made tracker. Stream source:
+          <a href="https://www.twitch.tv/finalfantasyxiv" target="_blank" rel="noreferrer">finalfantasyxiv on Twitch</a>.
+        </p>
+        <p>Built as a single static page for GitHub Pages.</p>
+      </footer>
+    </div>
+
+    <script id="bingo-data-fallback" type="application/json">
+      {
+        "title": "FFXIV Evercold Fanfest 2026 Bingo",
+        "items": [
+          { "id": "new-job-physical-ranged", "text": "New job: Physical Ranged DPS (Ranger/Corsair/Cannoneer)", "free": false },
+          { "id": "new-job-tank", "text": "New job: Tank announced (Hammer/Mace + Shield)", "free": false },
+          { "id": "beastmaster", "text": "Beastmaster job announced", "free": false },
+          { "id": "geomancer", "text": "Geomancer job announced", "free": false },
+          { "id": "dark-knight-rework", "text": "Dark Knight major rework", "free": false },
+          { "id": "scholar-rework", "text": "Scholar major rework", "free": false },
+          { "id": "white-mage-rework", "text": "White Mage major rework", "free": false },
+          { "id": "summoner-rework", "text": "Summoner adjustments", "free": false },
+          { "id": "limit-break-rework", "text": "Limit Break system reworked", "free": false },
+          { "id": "master-level-system", "text": "Master Level / horizontal progression system", "free": false },
+          { "id": "level-cap-110", "text": "Level cap raised to 110", "free": false },
+          { "id": "level-cap-stays-100", "text": "Level cap stays at 100 (horizontal only)", "free": false },
+          { "id": "free-space", "text": "Yoshi-P says 'please look forward to it'", "free": true },
+          { "id": "void-return", "text": "Return to the Void / Thirteenth connection", "free": false },
+          { "id": "garlemald-expansion", "text": "Garlemald restoration storyline", "free": false },
+          { "id": "meracydia", "text": "New zone: Meracydia revealed", "free": false },
+          { "id": "south-sea-isles", "text": "New zone: South Sea Isles", "free": false },
+          { "id": "alliance-raid", "text": "New alliance raid series announced", "free": false },
+          { "id": "savage-raid", "text": "New savage raid series (5 bosses)", "free": false },
+          { "id": "ultimate-raids", "text": "Ultimate raid announced", "free": false },
+          { "id": "ui-overhaul", "text": "Major UI overhaul confirmed", "free": false },
+          { "id": "fate-log-system", "text": "Fate Log / Merit Point system", "free": false },
+          { "id": "5-dungeons-launch", "text": "5+ dungeons at launch", "free": false },
+          { "id": "new-gameplay-system", "text": "Completely new gameplay system revealed", "free": false },
+          { "id": "yoshi-p-wears-scarf", "text": "Yoshi-P wears a scarf (or costume)", "free": false }
+        ]
+      }
+    </script>
+
+    <script id="liveblog-data-fallback" type="application/json">
+      {
+        "title": "FFXIV Fanfest 2026 Liveblog",
+        "updatedAt": "",
+        "entries": []
+      }
+    </script>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
