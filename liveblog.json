@@ -3,6 +3,116 @@
   "updatedAt": "2026-04-24T00:00:00Z",
   "entries": [
     {
+      "id": "free-trial-shadowbringers",
+      "region": "na",
+      "timestamp": "2026-04-24T21:30:00Z",
+      "headline": "Free Trial Expanded to Shadowbringers",
+      "body": "The FFXIV free trial now includes the entirety of Shadowbringers (through Patch 5.58). New players can now experience the complete Hydaelyn/Zodiark saga including the critically acclaimed Shadowbringers expansion up to the end of the 5.x content without subscription. This is the largest free trial expansion in the game's history.",
+      "sentiment": "positive",
+      "sources": [
+        "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
+      "id": "reborn-evolved-job-modes",
+      "region": "na",
+      "timestamp": "2026-04-24T21:15:00Z",
+      "headline": "Reborn & Evolved: Dual Job Modes Announced",
+      "body": "Evercold introduces a revolutionary dual-mode system for jobs. Each job has a 'Reborn' mode (simplified, accessible) and 'Evolved' mode (complex, mastery-focused). This is the biggest combat system change in FFXIV history, designed to solve the 'job identity erosion' problem while keeping jobs accessible to new players. Yoshi-P emphasized this addresses community feedback about jobs feeling too similar since Endwalker.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.polygon.com/gaming/final-fantasy-xiv-evercold-job-modes"
+      ]
+    },
+    {
+      "id": "adventurer-activity-system",
+      "region": "na",
+      "timestamp": "2026-04-24T21:00:00Z",
+      "headline": "Daily → Weekly: Adventurer Activity System",
+      "body": "The Daily Duty Roulette system is being overhauled into 'Adventurer Activities' — a weekly progression system with more flexibility. Players can bank activity points and spend them throughout the week, reducing the pressure to log in every single day. This addresses major community feedback about daily FOMO and burnout.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.pcgamesn.com/final-fantasy-xiv-evercold-adventurer-activity"
+      ]
+    },
+    {
+      "id": "cross-dc-matchmaking",
+      "region": "na",
+      "timestamp": "2026-04-24T20:45:00Z",
+      "headline": "Same-Region Cross-DC Matchmaking",
+      "body": "Data Center travel is expanding with same-region cross-DC matchmaking. Players can now group with friends across different Data Centers within the same region (Aether, Crystal, Dynamis, Primal) for all instanced content. This solves the 'friends on different DC' problem while maintaining regional stability.",
+      "sentiment": "positive",
+      "sources": [
+        "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
+      "id": "evangelion-alliance-raid",
+      "region": "na",
+      "timestamp": "2026-04-24T20:30:00Z",
+      "headline": "Evangelion Collaboration: 'Ghosts of Desire' Alliance Raid",
+      "body": "A major collaboration with Neon Genesis Evangelion has been announced. The 'Ghosts of Desire' alliance raid series features Evangelion-themed content including angel-inspired boss fights, plugsuit-inspired gear sets, and a MAGI-inspired arena. This is a full alliance raid series releasing throughout Evercold's lifecycle, not just a single event.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.animenewsnetwork.com/news/2026-04-24/ffxiv-evangelion-collaboration-ghosts-of-desire"
+      ]
+    },
+    {
+      "id": "switch-2-port",
+      "region": "na",
+      "timestamp": "2026-04-24T20:15:00Z",
+      "headline": "Nintendo Switch 2 Port Announced (August 2026)",
+      "body": "FFXIV is coming to Nintendo Switch 2. The port launches August 2026 as a separate subscription from the main game. Full cross-play and cross-progression confirmed. Yoshi-P noted the Switch 2's improved hardware and UI flexibility made this possible where the original Switch could not handle the game.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.ign.com/articles/final-fantasy-xiv-nintendo-switch-2-port-august-2026"
+      ]
+    },
+    {
+      "id": "third-raid-difficulty",
+      "region": "na",
+      "timestamp": "2026-04-24T19:45:00Z",
+      "headline": "Third Raid Difficulty: Normal → Extreme → Savage",
+      "body": "Evercold introduces a new middle raid tier between Normal and Savage, effectively making three difficulties for savage raids. This addresses the 'savage cliff' where casual players hit a wall after Normal. The new tier provides a smoother progression curve for mid-core raiders.",
+      "sentiment": "positive",
+      "sources": [
+        "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
+      "id": "armory-ilvl-reflection",
+      "region": "na",
+      "timestamp": "2026-04-24T19:30:00Z",
+      "headline": "Armory Rework: iLvl Reflection Across Jobs",
+      "body": "The Armory system (gear storage) is being overhauled to automatically reflect item levels across all jobs. When you gear your main job, your other jobs automatically get appropriate item level gear for their level. This eliminates the ' gearing alts' grind and addresses major inventory management issues.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.massivelyop.com/2026/04/24/ffxiv-evercold-armory-ilvl-reflection"
+      ]
+    },
+    {
+      "id": "gear-piece-toggles",
+      "region": "na",
+      "timestamp": "2026-04-24T19:15:00Z",
+      "headline": "Gear Piece Toggles: Glamour Revolution",
+      "body": "A major glamour system improvement: individual gear piece toggles. You can now show/hide specific pieces (e.g., hide just the headpiece, show just the chest piece) independent of the rest of the set. This is described as a 'glamour revolution' by the community, allowing unprecedented customization.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.thegamer.com/final-fantasy-xiv-evercold-gear-toggle-glamour"
+      ]
+    },
+    {
+      "id": "character-creation-expansion",
+      "region": "na",
+      "timestamp": "2026-04-24T19:00:00Z",
+      "headline": "Character Creation Expansion: Neon Hair & Face Paint",
+      "body": "Character creation is getting major new options: expanded color picker with neon hair colors, multi-layer face paint system, and more granular body sliders. Existing characters can use the Aesthetician to access these new options. This addresses years of community requests for more customization.",
+      "sentiment": "positive",
+      "sources": [
+        "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
       "id": "yoshi-p-shirt-research",
       "region": "na",
       "timestamp": "2026-04-24T20:00:00Z",
