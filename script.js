@@ -40,6 +40,29 @@ const STREAM_MODE = {
   ENDED: "ended"
 };
 
+const LIVEBLOG_REGIONS = {
+  general: {
+    label: "General News",
+    emptyTitle: "No general news yet",
+    emptyBody: 'Add entries tagged with region "general" to <code>liveblog.json</code>.'
+  },
+  na: {
+    label: "Fanfest NA",
+    emptyTitle: "No Fanfest NA updates yet",
+    emptyBody: 'Add entries tagged with region "na" to <code>liveblog.json</code>.'
+  },
+  eu: {
+    label: "Fanfest EU",
+    emptyTitle: "No Fanfest EU updates yet",
+    emptyBody: 'Add entries tagged with region "eu" to <code>liveblog.json</code>.'
+  },
+  jp: {
+    label: "Fanfest JP",
+    emptyTitle: "No Fanfest JP updates yet",
+    emptyBody: 'Add entries tagged with region "jp" to <code>liveblog.json</code>.'
+  }
+};
+
 const appState = {
   bingoData: { items: [] },
   liveblogData: { entries: [] },
@@ -48,7 +71,10 @@ const appState = {
   streamPanelElement: null,
   streamButtons: [],
   streamViews: new Map(),
-  activeStreamKey: null
+  activeStreamKey: null,
+  selectedLiveblogRegion: "na",
+  activeLiveblogRegion: null,
+  liveblogButtons: []
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -67,8 +93,10 @@ async function initialize() {
   appState.liveblogData = liveblogData ?? { entries: [] };
   appState.streamPanelElement = document.getElementById("stream-panel");
   appState.streamButtons = Array.from(document.querySelectorAll("[data-stream-selector]"));
+  appState.liveblogButtons = Array.from(document.querySelectorAll("[data-liveblog-selector]"));
 
   bindStreamSelector();
+  bindLiveblogSelector();
   bindBingoReset();
   initializeStreamPanel();
   renderCountdowns();
@@ -190,6 +218,43 @@ function bindStreamSelector() {
       const direction = event.key === "ArrowRight" ? 1 : -1;
       const nextIndex = (currentIndex + direction + appState.streamButtons.length) % appState.streamButtons.length;
       const nextButton = appState.streamButtons[nextIndex];
+
+      nextButton.focus();
+      nextButton.click();
+    });
+  });
+}
+
+function bindLiveblogSelector() {
+  appState.liveblogButtons.forEach((button) => {
+    const regionKey = normalizeLiveblogRegion(button.dataset.liveblogSelector);
+    const isActive = regionKey === appState.selectedLiveblogRegion;
+
+    button.id = `liveblog-tab-${regionKey}`;
+    button.tabIndex = isActive ? 0 : -1;
+
+    button.addEventListener("click", () => {
+      const nextRegion = normalizeLiveblogRegion(button.dataset.liveblogSelector);
+
+      if (nextRegion === appState.selectedLiveblogRegion) {
+        return;
+      }
+
+      appState.selectedLiveblogRegion = nextRegion;
+      renderLiveblog(appState.liveblogData);
+    });
+
+    button.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") {
+        return;
+      }
+
+      event.preventDefault();
+
+      const currentIndex = appState.liveblogButtons.indexOf(button);
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = (currentIndex + direction + appState.liveblogButtons.length) % appState.liveblogButtons.length;
+      const nextButton = appState.liveblogButtons[nextIndex];
 
       nextButton.focus();
       nextButton.click();
@@ -527,7 +592,15 @@ function renderLiveblog(liveblogData) {
     return;
   }
 
-  const entries = Array.isArray(liveblogData.entries) ? [...liveblogData.entries] : [];
+  applyActiveLiveblogSelection();
+
+  const selectedRegion = normalizeLiveblogRegion(appState.selectedLiveblogRegion);
+  const regionConfig = LIVEBLOG_REGIONS[selectedRegion];
+  const entries = Array.isArray(liveblogData.entries)
+    ? liveblogData.entries
+        .filter((entry) => normalizeLiveblogRegion(entry.region) === selectedRegion)
+        .slice()
+    : [];
 
   entries.sort((left, right) => new Date(right.timestamp).getTime() - new Date(left.timestamp).getTime());
 
@@ -540,10 +613,11 @@ function renderLiveblog(liveblogData) {
   if (!entries.length) {
     feed.innerHTML = `
       <div class="empty-state">
-        <h3>No liveblog updates yet</h3>
-        <p>Add entries to <code>liveblog.json</code> once keynotes start rolling.</p>
+        <h3>${escapeHtml(regionConfig.emptyTitle)}</h3>
+        <p>${regionConfig.emptyBody}</p>
       </div>
     `;
+    animateLiveblogFeed(feed);
     return;
   }
 
@@ -570,6 +644,39 @@ function renderLiveblog(liveblogData) {
       `;
     })
     .join("");
+
+  animateLiveblogFeed(feed);
+}
+
+function applyActiveLiveblogSelection() {
+  const nextRegion = normalizeLiveblogRegion(appState.selectedLiveblogRegion);
+
+  appState.activeLiveblogRegion = nextRegion;
+
+  appState.liveblogButtons.forEach((button) => {
+    const isActive = normalizeLiveblogRegion(button.dataset.liveblogSelector) === nextRegion;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+    button.tabIndex = isActive ? 0 : -1;
+  });
+}
+
+function animateLiveblogFeed(feed) {
+  feed.classList.remove("is-transitioning");
+  void feed.offsetWidth;
+  feed.classList.add("is-transitioning");
+  feed.addEventListener(
+    "animationend",
+    () => {
+      feed.classList.remove("is-transitioning");
+    },
+    { once: true }
+  );
+}
+
+function normalizeLiveblogRegion(region) {
+  const normalized = String(region || "general").toLowerCase();
+  return LIVEBLOG_REGIONS[normalized] ? normalized : "general";
 }
 
 function renderSentimentChip(sentiment) {

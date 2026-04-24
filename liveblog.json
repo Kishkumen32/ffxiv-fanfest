@@ -4,6 +4,7 @@
   "entries": [
     {
       "id": "yoshi-p-shirt-research",
+      "region": "na",
       "timestamp": "2026-04-24T20:00:00Z",
       "headline": "Yoshi-P's Shirt Pattern & Gunshield Tank Theory",
       "body": "Historical analysis reveals Yoshi-P's Fanfest t-shirts cryptically hint at new jobs: Batman → Dark Knight, Spider-Man/Sam Raimi → Samurai, TMNT artists → Pictomancer. The pattern uses director/creator wordplay, color association, and thematic connections. Based on research into Rhitahtyn sas Arvina (ARR antagonist with gunshield 'Tartarus'), we're predicting a potential Gunshield Tank job — a defensive tank wielding shield-integrated firearms, distinct from Gunbreaker's gunblade.",
@@ -14,6 +15,7 @@
     },
     {
       "id": "announce-evercold",
+      "region": "na",
       "timestamp": "2026-04-24T17:00:00Z",
       "headline": "EVERCOOL Officially Announced",
       "body": "Naoki Yoshida unveils FFXIV: Evercold at NA Fanfest 2026 keynote. The expansion kicks off The Godless Realms Saga and sends players to 'The Fourth' — a frozen reflection of Hydaelyn. Releasing January 2027. Patch 7.5 'Trail to the Heavens' bridges into the story.",
@@ -24,7 +26,19 @@
       ]
     },
     {
+      "id": "patch-schedule-2026",
+      "region": "na",
+      "timestamp": "2026-04-24T17:15:00Z",
+      "headline": "2026 Patch Schedule Revealed",
+      "body": "Complete roadmap for the remainder of 2026: Patch 7.5 launches April 28 (Beastmaster limited job), followed by Patch 7.51 on June 2. Patch 7.55 arrives July 28, with the EU Fanfest occurring mid-July. Patch 7.56 scheduled for September 8, bridging into the January 2027 Evercold launch.",
+      "sentiment": "positive",
+      "image": "./assets/images/patch-schedule-2026.png",
+      "imageCaption": "FFXIV 2026 patch roadmap: 7.5 (Apr 28) → 7.51 (Jun 2) → 7.55 (Jul 28) → 7.56 (Sep 8)",
+      "sources": []
+    },
+    {
       "id": "trailer-description",
+      "region": "na",
       "timestamp": "2026-04-24T17:05:00Z",
       "headline": "Trailer Drops: Frozen Promised Land",
       "body": "The teaser trailer features an elderly woman telling a story about a Promised Land to an Au Ra child — the land ends up frozen over. The Warrior of Light arrives from the stars. Instant Shadowbringers parallel noted: instead of The First flooding with light, The Fourth is freezing over.",
@@ -35,6 +49,7 @@
     },
     {
       "id": "community-cautious",
+      "region": "general",
       "timestamp": "2026-04-24T17:30:00Z",
       "headline": "Community Sentiment: Cautiously Optimistic",
       "body": "Fans on Reddit and gaming forums are cautiously hopeful. Primary concerns: Dawntrail's 'Mixed' Steam reviews and a 160k player drop (930k → 770k active characters) have raised the stakes. Community consensus: 'FFXIV can't afford another failed expansion.' Trailer story quality praised. Yoshi-P's pre-emptive 'not a rebirth' framing helped manage expectations.",
@@ -46,6 +61,7 @@
     },
     {
       "id": "new-jobs-hinted",
+      "region": "na",
       "timestamp": "2026-04-24T17:45:00Z",
       "headline": "New Jobs Confirmed — Details at Future Fanfests",
       "body": "Yoshi-P confirmed 'numerous new jobs' are coming to Evercold, with details to be revealed across all three Fan Fest events. No specific jobs named yet. Community speculation centers on Physical Ranged DPS, Beastmaster, Geomancer, and a new Tank. Stay tuned for EU and JP Fanfest announcements.",
@@ -54,6 +70,7 @@
     },
     {
       "id": "january-2027-release",
+      "region": "general",
       "timestamp": "2026-04-24T18:00:00Z",
       "headline": "January 2027 Release — Earlier Than Feared",
       "body": "Many players feared a mid-2027 release. Evercold landing in January 2027 was received positively — a shortened reveal-to-launch gap compared to Dawntrail's pattern. Community reaction: relief that the wait won't be as long as expected.",
@@ -64,6 +81,7 @@
     },
     {
       "id": "female-hrothgar-continues",
+      "region": "na",
       "timestamp": "2026-04-24T18:15:00Z",
       "headline": "Female Hrothgar Returning, Tural Expands",
       "body": "Evercold continues Tural region storylines introduced in Dawntrail, and female Hrothgar will remain playable. Lore fans note the connection to Halmarut (from Dawntrail 7.x patches) who helps guide characters between reflections.",
@@ -72,6 +90,7 @@
     },
     {
       "id": "jobs-qol-promised",
+      "region": "na",
       "timestamp": "2026-04-24T18:30:00Z",
       "headline": "Job Reworks and QoL Changes Promised",
       "body": "Yoshi-P teased 'major changes to make jobs more interesting' and 'quality of life improvements.' Community has been vocal about job identity erosion since Endwalker. This announcement sets expectations for substantive combat system changes in 8.0.",
@@ -82,6 +101,7 @@
     },
     {
       "id": "high-stakes-community",
+      "region": "general",
       "timestamp": "2026-04-24T19:00:00Z",
       "headline": "Community in 'Prove It' Mode",
       "body": "Bottom line from Reddit/forum sentiment: players want to believe Evercold will be good, but Dawntrail's underwhelming reception has created a cautious fanbase. A top comment: 'If they want to bring back identity (with balanced jobs) they need to make jobs unique again.' Another: '8.0 will be make or break for a lot of people.'",

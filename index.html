@@ -35,6 +35,17 @@
                 src="./assets/images/evercold-logo.png"
                 alt="Final Fantasy XIV Evercold logo"
               />
+              <div class="hero__trailer">
+                <iframe
+                  class="hero__trailer-frame"
+                  src="https://www.youtube.com/embed/Dk3rfUC80DE"
+                  title="Final Fantasy XIV Evercold trailer"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
               <h1>The cold never stops. Neither do we.</h1>
               <p class="hero__lede">
                 The Godless Realms Saga begins. Track every Fanfest stop, watch the official
@@ -202,14 +213,57 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">Rapid updates</p>
-              <h2 id="liveblog-title">Liveblog feed</h2>
+              <h2 id="liveblog-title">News &amp; Updates</h2>
             </div>
             <div class="section-heading__meta">
               <p class="section-copy">
-              Entries are loaded from <code>liveblog.json</code> and rendered newest first. Start empty, then publish updates by editing JSON.
+               Entries are loaded from <code>liveblog.json</code> and rendered newest first. Start empty, then publish updates by editing JSON.
               </p>
               <p id="liveblog-updated" class="section-meta-note" aria-live="polite"></p>
             </div>
+          </div>
+
+          <div class="liveblog-selector" role="tablist" aria-label="Filter news and updates by region">
+            <button
+              class="liveblog-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="liveblog-feed"
+              data-liveblog-selector="general"
+            >
+              General News
+            </button>
+            <button
+              class="liveblog-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="liveblog-feed"
+              data-liveblog-selector="na"
+            >
+              Fanfest NA
+            </button>
+            <button
+              class="liveblog-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="liveblog-feed"
+              data-liveblog-selector="eu"
+            >
+              Fanfest EU
+            </button>
+            <button
+              class="liveblog-selector__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="liveblog-feed"
+              data-liveblog-selector="jp"
+            >
+              Fanfest JP
+            </button>
           </div>
 
           <div id="liveblog-feed" class="liveblog-feed" aria-live="polite"></div>
