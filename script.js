@@ -554,6 +554,7 @@ function renderLiveblog(liveblogData) {
       const timestamp = entry.timestamp ? formatTimestamp(entry.timestamp) : "Timestamp pending";
       const sentiment = entry.sentiment ? renderSentimentChip(entry.sentiment) : "";
       const sources = Array.isArray(entry.sources) && entry.sources.length ? renderSourceList(entry.sources) : "";
+      const media = entry.image ? renderLiveblogMedia(entry.image, entry.imageCaption) : "";
 
       return `
         <article class="liveblog-entry">
@@ -563,6 +564,7 @@ function renderLiveblog(liveblogData) {
           </div>
           <h3>${escapeHtml(title)}</h3>
           <p>${escapeHtml(content)}</p>
+          ${media}
           ${sources}
         </article>
       `;
@@ -572,9 +574,19 @@ function renderLiveblog(liveblogData) {
 
 function renderSentimentChip(sentiment) {
   const normalized = String(sentiment).toLowerCase();
-  const modifier = ["positive", "mixed", "neutral", "negative"].includes(normalized) ? normalized : "neutral";
+  const modifier = ["positive", "mixed", "neutral", "negative", "prediction"].includes(normalized) ? normalized : "neutral";
 
   return `<span class="liveblog-chip liveblog-chip--${modifier}">${escapeHtml(sentiment)}</span>`;
+}
+
+function renderLiveblogMedia(imageUrl, caption) {
+  const captionHtml = caption ? `<div class="liveblog-prediction-caption">${escapeHtml(caption)}</div>` : "";
+  return `
+    <div class="liveblog-prediction-media">
+      <img src="${escapeAttribute(imageUrl)}" alt="${escapeAttribute(caption || "Prediction image")}" loading="lazy">
+      ${captionHtml}
+    </div>
+  `;
 }
 
 function renderSourceList(sources) {

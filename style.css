@@ -859,6 +859,32 @@ select {
   color: #ffd4d4;
 }
 
+.liveblog-chip--prediction {
+  background: rgba(168, 216, 234, 0.2);
+  color: var(--ice-bright);
+  border: 1px solid rgba(126, 200, 227, 0.4);
+}
+
+.liveblog-prediction-media {
+  margin-top: 0.75rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.liveblog-prediction-media img {
+  width: 100%;
+  display: block;
+}
+
+.liveblog-prediction-caption {
+  padding: 0.6rem 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 .liveblog-sources {
   display: flex;
   flex-wrap: wrap;
