@@ -3,6 +3,17 @@
   "updatedAt": "2026-04-24T00:00:00Z",
   "entries": [
     {
+      "id": "yoshi-p-shirt-research",
+      "timestamp": "2026-04-24T20:00:00Z",
+      "headline": "Research: Yoshi-P's Shirt & The Job Prediction Pattern",
+      "body": "Historical analysis reveals Yoshi-P's Fanfest t-shirts cryptically hint at new jobs: Batman → Dark Knight, Spider-Man/Sam Raimi → Samurai, TMNT artists → Pictomancer. The pattern uses director/creator wordplay, color association, and thematic connections. Today's NA Fanfest 2026 shirt is under investigation. Meanwhile, research into Rhitahtyn sas Arvina (ARR antagonist with gunshield 'Tartarus') suggests a potential Gunshield Tank job — a defensive tank wielding shield-integrated firearms, distinct from Gunbreaker's gunblade.",
+      "sentiment": "neutral",
+      "sources": [
+        "https://www.reddit.com/r/ffxiv/comments/...",
+        "https://www.polygon.com/..."
+      ]
+    },
+    {
       "id": "announce-evercold",
       "timestamp": "2026-04-24T17:00:00Z",
       "headline": "EVERCOOL Officially Announced",

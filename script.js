@@ -243,8 +243,8 @@ function refreshStreamPanel({ force = false } = {}) {
     appState.selectedStreamKey = chooseInitialStreamKey();
   }
 
-  syncAllStreamViews(force);
   applyActiveStreamSelection(force);
+  syncAllStreamViews(force);
 }
 
 function syncAllStreamViews(force) {
@@ -274,6 +274,7 @@ function renderStreamStage(viewRecord, mode) {
 
       const iframe = document.createElement("iframe");
       iframe.src = `https://player.twitch.tv/?channel=finalfantasyxiv&parent=${encodeURIComponent(parentHost)}&muted=true`;
+      iframe.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
       iframe.setAttribute("allowfullscreen", "");
       iframe.setAttribute("scrolling", "no");
       iframe.title = `${viewRecord.event.name} live Twitch stream`;

@@ -571,6 +571,7 @@ select {
 
 .stream-stage {
   position: relative;
+  display: grid;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -581,16 +582,30 @@ select {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
+.stream-stage > * {
+  grid-area: 1 / 1;
+}
+
 .stream-frame,
 .stream-placeholder {
   width: 100%;
   height: 100%;
+  min-width: 0;
+  min-height: 0;
+  border-radius: calc(var(--radius-xl) - 4px);
+  overflow: hidden;
+}
+
+.stream-frame {
+  position: relative;
 }
 
 .stream-frame iframe {
   width: 100%;
   height: 100%;
   border: 0;
+  border-radius: calc(var(--radius-xl) - 4px);
+  background: #000;
 }
 
 .stream-placeholder {
