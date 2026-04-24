@@ -1,0 +1,30 @@
+{
+  "title": "FFXIV Evercold Fanfest 2026 Bingo",
+  "items": [
+    { "id": "new-job-physical-ranged", "text": "New job: Physical Ranged DPS (Ranger/Corsair/Cannoneer)", "free": false },
+    { "id": "new-job-tank", "text": "New job: Tank announced (Hammer/Mace + Shield)", "free": false },
+    { "id": "beastmaster", "text": "Beastmaster job announced", "free": false },
+    { "id": "geomancer", "text": "Geomancer job announced", "free": false },
+    { "id": "dark-knight-rework", "text": "Dark Knight major rework", "free": false },
+    { "id": "scholar-rework", "text": "Scholar major rework", "free": false },
+    { "id": "white-mage-rework", "text": "White Mage major rework", "free": false },
+    { "id": "summoner-rework", "text": "Summoner adjustments", "free": false },
+    { "id": "limit-break-rework", "text": "Limit Break system reworked", "free": false },
+    { "id": "master-level-system", "text": "Master Level / horizontal progression system", "free": false },
+    { "id": "level-cap-110", "text": "Level cap raised to 110", "free": false },
+    { "id": "level-cap-stays-100", "text": "Level cap stays at 100 (horizontal only)", "free": false },
+    { "id": "free-space", "text": "Yoshi-P says 'please look forward to it'", "free": true },
+    { "id": "void-return", "text": "Return to the Void / Thirteenth connection", "free": false },
+    { "id": "garlemald-expansion", "text": "Garlemald restoration storyline", "free": false },
+    { "id": "meracydia", "text": "New zone: Meracydia revealed", "free": false },
+    { "id": "south-sea-isles", "text": "New zone: South Sea Isles", "free": false },
+    { "id": "alliance-raid", "text": "New alliance raid series announced", "free": false },
+    { "id": "savage-raid", "text": "New savage raid series (5 bosses)", "free": false },
+    { "id": "ultimate-raids", "text": "Ultimate raid announced", "free": false },
+    { "id": "ui-overhaul", "text": "Major UI overhaul confirmed", "free": false },
+    { "id": "fate-log-system", "text": "Fate Log / Merit Point system", "free": false },
+    { "id": "5-dungeons-launch", "text": "5+ dungeons at launch", "free": false },
+    { "id": "new-gameplay-system", "text": "Completely new gameplay system revealed", "free": false },
+    { "id": "yoshi-p-wears-scarf", "text": "Yoshi-P wears a scarf (or costume)", "free": false }
+  ]
+}
