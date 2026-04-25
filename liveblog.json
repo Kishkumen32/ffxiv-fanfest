@@ -1,7 +1,19 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-25T19:00:00Z",
+  "updatedAt": "2026-04-26T00:00:00Z",
   "entries": [
+    {
+      "id": "eu-fanfest-expectations-july-2026",
+      "region": "eu",
+      "timestamp": "2026-04-26T00:00:00Z",
+      "headline": "What EU Fanfest Is Expected to Add in Berlin",
+      "body": "Berlin is now the next major reveal stop for Evercold on July 25-26, 2026. Community and press expectations are lining up around three specific beats: the full Tank job reveal, a deeper breakdown of the new Action Skins customization system, and concrete details on the third raid difficulty teased during NA Fanfest. If NA established the expansion's tone and systems, EU is widely expected to provide the first serious mechanical follow-through.",
+      "sentiment": "prediction",
+      "sources": [
+        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/",
+        "https://butwhytho.net/2026/04/ffxiv-fan-fest-patch-8-0-evercold/"
+      ]
+    },
     {
       "id": "patch-7.5-release",
       "region": "general",
