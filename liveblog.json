@@ -1,7 +1,84 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-26T00:00:00Z",
+  "updatedAt": "2026-04-26T07:00:00Z",
   "entries": [
+    {
+      "id": "rion-final-verdict-evolved-mode",
+      "region": "general",
+      "timestamp": "2026-04-26T07:00:00Z",
+      "headline": "Rion: 'Interested and Tentative' on Evolved Mode",
+      "body": "After walking through every showcase job, Rion lands on a verdict that feels bigger than any one toolkit: FFXIV is standing on the edge of its boldest combat reset since A Realm Reborn. He calls Evercold's redesign 'almost certainly the most significant combat shift that has taken place since after A Realm Reborn released,' and sums up his reaction as 'interested and tentative about the details.' For Rion, the promise is real—but so is the risk. 'It could be really good if they execute in the ways they need to. Whether it's easier, harder, more or less interesting, all of those things are as of yet a bit unknown. But one thing is for sure, it's new. And if I'm going to be honest with you, I'd take that over the old status quo any day.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-evolved-mode-overview",
+      "region": "na",
+      "timestamp": "2026-04-26T06:45:00Z",
+      "headline": "Content Creator Rion Breaks Down Evolved Mode Jobs",
+      "body": "Rion's read on the Dev Panel footage is blunt: Evolved Mode doesn't look like a side option—it looks like the future of FFXIV combat. 'Evolved mode is very clearly the way the game is supposed to be played going forward,' he says, arguing that new jobs being Evolved-only and existing Evolved kits being 'inherently slightly stronger' tells the real story. Across Paladin, Bard, Dragoon, and White Mage, he sees three pillars shaping the redesign: stronger job identity, genuinely different rotations, and a serious trim to button bloat. The most dramatic system-wide change may be the death of raid buffs, with synergy actions stripped out across the board—meaning, in Rion's words, 'the two minute meta at last is about to breathe its final breath.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-tank-role-split-confirmed",
+      "region": "na",
+      "timestamp": "2026-04-26T06:30:00Z",
+      "headline": "Evolved Mode Splits Tanks: Main vs Off Tanks",
+      "body": "One of Rion's biggest takeaways is that Evercold may finally formalize tank identity instead of leaving every shield wall to feel interchangeable. In his breakdown, Main Tanks—Paladin plus the still-unrevealed new job—gain the 'ability to counter enemy attacks,' leaning into direct damage mitigation and timing windows. Off Tanks—Warrior, Dark Knight, and Gunbreaker—shift toward 'actions that lower enemy damage,' giving them a clearer party-mitigation lane. Rion isn't declaring it a solved system yet, but he likes the direction: 'In theory I can get behind this though I'd really like to see what actually ends up amounting to in reality.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-paladin-counter-attack-system",
+      "region": "na",
+      "timestamp": "2026-04-26T06:15:00Z",
+      "headline": "Paladin's New Counter-Attack Mechanic in Evolved Mode",
+      "body": "Rion's Paladin breakdown paints a job built around anticipation instead of simple upkeep. Holy Sheltron now feeds a new 'counter-actions' system: take damage within eight seconds and you earn Answer Crest for a stronger GCD, then tighten the timing to four seconds for an even more explosive payoff. That turns defense into a rhythm game of its own. As Rion puts it, 'You're constantly trying to figure out how to use your Holy Sheltrons to take damage at the right time to get procs of counter-strikes.' Even Paladin's utility buttons appear sharper and more modern, with Provoke, Shield Lob, and the gap closer becoming context-sensitive depending on whether you're targeting an enemy or an ally.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-dragoon-positionals-split",
+      "region": "na",
+      "timestamp": "2026-04-26T06:00:00Z",
+      "headline": "Dragoon's Major Positional Rework: Left/Right/Back Split",
+      "body": "If one job screamed 'new identity' to Rion, it was Dragoon. Evolved Mode appears to tear up the old flank-versus-rear script and replace it with a three-way positional dance: LEFT, RIGHT, and BACK. Players must clear Sinister, Dexter, and Heavensward before looping back, turning every combo cycle into a route rather than a repetition. Heavensward also grants Wyrmwind Thrust, a ranged follow-up that can stack, while jumps let Dragoons ignore one positional entirely to accelerate the sequence. Rion loved the ambition, even while hoping it stays unique: 'I desperately hope that this left-right positional split is Dragoon exclusive, because it makes for a really interesting baseline of a unique job identity.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-white-mage-least-convincing",
+      "region": "na",
+      "timestamp": "2026-04-26T05:45:00Z",
+      "headline": "Rion: White Mage Evolved Mode 'Seemed Like Easy Mode'",
+      "body": "White Mage was the one showcase that failed to fully win Rion over. He calls it the 'least convincing showing of the day,' arguing that the kit looked more streamlined than transformed. The headline changes are still substantial: damage spells appear castless, a new Sanctity gauge rewards healing GCDs with stacks for Holy Sanctuary, Aqua Veil and Divine Benison are merged, and Plenary now procs Aflatus Solace and Rapture while layering in Regen over time. But for Rion, the question is whether that adds depth or just lowers the floor. 'I'm very much hoping that White Mage is simply the easy healer and that the other three are going to have a little bit more meat.'",
+      "sentiment": "mixed",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
+    {
+      "id": "rion-bard-mobility-and-songs",
+      "region": "na",
+      "timestamp": "2026-04-26T05:30:00Z",
+      "headline": "Bard's New Performance Gauge and Wanderer's Volley",
+      "body": "Rion came away especially high on Bard, describing an Evolved kit that looks faster, cleaner, and far more kinetic. The star is Wanderer's Volley, a directional GCD gap closer with three charges and a 30-second cooldown that doubles as damage. In his words, it's a 'really cool mobility skill that doubles up as damage and makes Bard feel very snappy and responsive.' Bard's songs also appear rebuilt around a new Performance gauge that stores three stacks and regenerates one every 20 seconds, pushing players through all three songs before any repeat. Each anthem brings its own identity to the party: Mage's Ballad grants AoE regen, Army's Paeon grants AoE movement speed, and The Wanderer's Minuet provides a shield.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+      ]
+    },
     {
       "id": "eu-fanfest-expectations-july-2026",
       "region": "eu",
