@@ -83,6 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   };
 
+  const renderCommentary = (commentary, label = 'Commentary') => {
+    if (!commentary) {
+      return '';
+    }
+
+    return `
+      <aside class="summary-commentary" aria-label="${escapeHtml(label)}">
+        <p class="summary-commentary__label">${escapeHtml(label)}</p>
+        <p>${escapeHtml(commentary)}</p>
+      </aside>
+    `;
+  };
+
   const renderPoints = (points) => {
     if (!Array.isArray(points) || !points.length) {
       return '';
@@ -93,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <article class="summary-point-card">
           <h3>${escapeHtml(point.title)}</h3>
           <p>${escapeHtml(point.text)}</p>
+          ${renderCommentary(point.commentary, point.commentaryLabel || 'Rion observes')}
         </article>
       `)
       .join('');
@@ -127,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="eyebrow">${escapeHtml(summary.eyebrow)}</p>
             <h1 id="summary-title">${escapeHtml(summary.title)}</h1>
             <p class="summary-hero__overview">${escapeHtml(summary.overview)}</p>
+            ${renderCommentary(summary.overviewCommentary, summary.overviewCommentaryLabel || 'Rion takeaway')}
             ${renderTags(summary.tags)}
             ${renderStats(summary.stats)}
           </div>

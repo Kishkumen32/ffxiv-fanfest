@@ -3,6 +3,8 @@
   "eyebrow": "NA Fanfest 2026 · Development panel recap",
   "title": "Evercold development panel summary",
   "overview": "The development panel drilled into Evercold's battle overhaul and framed Evolve mode as a way to make jobs easier to pick up, more distinct to master, and less constrained by the current two-minute burst meta. The clearest takeaways centered on job identity, battle-system freedom, and a simpler on-ramp for swapping roles.",
+  "overviewCommentary": "Rion's broad read was that Evolved mode is clearly the future of XIV: players can ask for a slower rollout, but they cannot really avoid where the combat team is trying to take the game.",
+  "overviewCommentaryLabel": "Rion takeaway",
   "tags": [
     "Battle overhaul",
     "Evolve mode",
@@ -25,7 +27,7 @@
     },
     {
       "label": "Topic clusters",
-      "value": "6 sections"
+      "value": "5 sections"
     }
   ],
   "sections": [
@@ -48,16 +50,28 @@
       "summary": "The clearest readable examples in the transcript focused on how Evolve mode changes the feel of individual jobs rather than just trimming buttons.",
       "points": [
         {
+          "title": "Paladin turns mitigation reads into counter-attack pressure",
+          "text": "Paladin's Evolve-mode footage pointed toward a more reactive tank loop, with Holy Sheltron timing feeding into counterattack payoffs and context-sensitive actions such as Provoke, Shield Lob, and the gap closer shifting based on whether Paladin is engaging an enemy or protecting an ally.",
+          "commentary": "Rion's main takeaway was that this could become Paladin's defining skill test: a tank that converts defensive timing reads into offensive reward instead of treating mitigation and damage as separate jobs.",
+          "commentaryLabel": "Rion observes"
+        },
+        {
           "title": "Dragoon leans harder into jumps and cleaner flow",
-          "text": "The team said Dragoon's Evolve mode was built around its signature jump attacks and improved Blood of the Dragon handling so the job feels slicker and tighter. They also noted that, like Paladin, Dragoon had action bloat that they intentionally reduced during the redesign."
+          "text": "The team said Dragoon's Evolve mode was built around its signature jump attacks and improved Blood of the Dragon handling so the job feels slicker and tighter. They also noted that, like Paladin, Dragoon had action bloat that they intentionally reduced during the redesign.",
+          "commentary": "Rion argued the positional rework is the real headline: if the left-right-back split survives to launch, it gives Dragoon a baseline identity he called genuinely unique instead of just another melee sharing the same flank-versus-rear language.",
+          "commentaryLabel": "Rion observes"
         },
         {
           "title": "White Mage turns healing into active offensive value",
-          "text": "White Mage gained a Sanctuary Gauge that fills through healing and can be spent on Holy Sanctuary for damage, directly addressing the old tension where GCD healing felt like a DPS loss. The panel also described instant basic attack spells, combo variation on repeated casts, consolidated tools, and mobility help so healer fundamentals are easier to learn without losing offensive tempo."
+          "text": "White Mage gained a Sanctuary Gauge that fills through healing and can be spent on Holy Sanctuary for damage, directly addressing the old tension where GCD healing felt like a DPS loss. The panel also described instant basic attack spells, combo variation on repeated casts, consolidated tools, and mobility help so healer fundamentals are easier to learn without losing offensive tempo.",
+          "commentary": "Rion called White Mage the least convincing showing of the panel. He understood the appeal of a deliberately approachable healer, but hopes that simplicity stays specific to White Mage and the other healers keep far more texture and decision-making.",
+          "commentaryLabel": "Rion observes"
         },
         {
           "title": "Bard is being rebuilt around flexible song choice",
-          "text": "Bard's Evolve mode uses a performance gauge to spend songs in whatever order best fits the encounter, with each song granting a different party utility and unlocking different follow-up actions. The result is a support job that still helps the party, but decides its sequencing based on the fight instead of following one static script every pull."
+          "text": "Bard's Evolve mode uses a performance gauge to spend songs in whatever order best fits the encounter, with each song granting a different party utility and unlocking different follow-up actions. The result is a support job that still helps the party, but decides its sequencing based on the fight instead of following one static script every pull.",
+          "commentary": "Rion zeroed in on Wanderer's Volley as the kind of addition that could make Bard feel faster and freer in real play: a three-charge directional gap closer that doubles as damage, alongside a song system that looks less locked to one script.",
+          "commentaryLabel": "Rion observes"
         }
       ]
     },
@@ -103,45 +117,19 @@
       "points": [
         {
           "title": "Main tanks and off tanks will have distinct specialties",
-          "text": "Main tanks are being positioned around mitigation and counterplay, while off tanks are leaning more into ally protection and enemy attack reduction. The panel specifically said Paladin and Evercold's new 8.0 tank will sit on the main-tank side of that split."
+          "text": "Main tanks are being positioned around mitigation and counterplay, while off tanks are leaning more into ally protection and enemy attack reduction. The panel specifically said Paladin and Evercold's new 8.0 tank will sit on the main-tank side of that split.",
+          "commentary": "Rion treated this as one of the clearest systemic reveals of the panel: Paladin and the new job on one side, Warrior, Dark Knight, and Gunbreaker on the other, which makes the role split feel structurally real rather than a vague design pitch.",
+          "commentaryLabel": "Rion observes"
         },
         {
           "title": "High-end groups can optimize the pairing, but regular content should stay flexible",
-          "text": "The explanation compared the concept to pure and barrier healers: the distinction matters, but parties are not supposed to feel blocked from clearing normal content because they picked the wrong subtype. Savage and Ultimate groups, however, should be able to squeeze more value from bringing both specialties together."
+          "text": "The explanation compared the concept to pure and barrier healers: the distinction matters, but parties are not supposed to feel blocked from clearing normal content because they picked the wrong subtype. Savage and Ultimate groups, however, should be able to squeeze more value from bringing both specialties together.",
+          "commentary": "Rion's support here was conditional. In theory, he can get behind the distinction if it sharpens tank identity without turning ordinary duties into composition checks, but he still wants to see how tightly encounter design will lean on the split.",
+          "commentaryLabel": "Rion observes"
         },
         {
           "title": "8.0 is only the beginning of battle changes",
           "text": "The presenters closed by saying Evercold is the start of a longer battle-system evolution rather than the finish line. Their stated aim is to keep refining the system after 8.0 so encounters, jobs, and player choices stay interesting for years to come."
-        }
-      ]
-    },
-    {
-      "title": "Rion's Evolved Mode Job Breakdowns",
-      "summary": "Content creator Rion recorded an in-depth analysis at 4:30 AM after staying up all night, offering a more player-facing read on the four Evolved Mode jobs shown during the Development Panel and what they could mean for 8.0 combat.",
-      "points": [
-        {
-          "title": "Paladin's counter-attack loop could become its defining skill test",
-          "text": "Rion highlighted Holy Sheltron's new timing game as one of the panel's most interesting reveals. In his reading, taking damage within eight seconds grants Answer Crest for a powerful GCD counter, while landing that timing within four seconds appears to unlock an even stronger version. That turns Paladin into a job that is constantly trying to convert defensive reads into offensive payoffs, while context-sensitive actions such as Provoke, Shield Lob, and the gap closer reinforce a more reactive toolkit whether the target is an enemy or an ally."
-        },
-        {
-          "title": "Dragoon's new positional structure looks like a true identity play",
-          "text": "Rion called out Dragoon's rework as one of the boldest ideas shown on stage. Instead of the familiar flank-versus-rear split, positionals now appear to branch into left, right, and back, with Sinister, Dexter, and Heavensward all needing to be completed before one can repeat. He said he \"desperately hopes\" this left-right positional split stays Dragoon-exclusive, because it creates a genuinely distinct baseline that could make the job feel unlike anything else in the roster."
-        },
-        {
-          "title": "White Mage looked approachable, but not yet especially exciting",
-          "text": "Rion described White Mage as the \"least convincing showing\" of the day, saying it came across more as an easy mode than a compelling evolution. The visible changes included castless damage spells, a new Sanctity gauge, and the merger of Aqua Veil and Divine Benison, all of which point toward a cleaner and more approachable healer kit. His reservation was less about accessibility itself and more about hoping White Mage becomes the intentionally simple healer while the other three retain noticeably more texture and decision-making."
-        },
-        {
-          "title": "Bard's performance gauge may make the job feel faster and freer",
-          "text": "For Bard, Rion zeroed in on Wanderer's Volley as a standout addition: a directional GCD gap closer with three charges that doubles as both mobility and damage. He framed it as exactly the kind of move that could make Bard feel snappy and responsive in motion, while the performance gauge cycling through all three songs before repeating suggests a more deliberate rotational arc than a single fixed loop."
-        },
-        {
-          "title": "The tank role split now sounds structurally confirmed",
-          "text": "Rion also treated the main-tank versus off-tank divide as one of the day's clearest system-level takeaways. In his summary, Paladin and the new tank sit on the main-tank side, built around countering enemy attacks, while Warrior, Dark Knight, and Gunbreaker fill the off-tank lane with actions that lower incoming enemy damage. That framing supports the panel's broader message that Evercold wants stronger role identities without turning regular content into a composition check."
-        },
-        {
-          "title": "His final verdict was cautious, but firmly in favor of the direction",
-          "text": "Rion's conclusion was that Evolved Mode is very clearly where Final Fantasy XIV is heading, even if players may want more time to process the scale of the change. He argued that 8.0 is set to make the game feel fundamentally different from any prior version, while remaining interested and tentative about the details rather than blindly celebratory. In the end, his stance was unmistakable: if the team executes well, he would rather see the game move toward this ambitious new direction than cling to the old status quo."
         }
       ]
     }
