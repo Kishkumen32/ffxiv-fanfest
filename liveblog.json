@@ -1,7 +1,56 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-25T02:00:00Z",
+  "updatedAt": "2026-04-25T18:00:00Z",
   "entries": [
+    {
+      "id": "patch-7.5-release",
+      "region": "general",
+      "timestamp": "2026-04-25T17:00:00Z",
+      "headline": "Patch 7.5 'Trail to the Heavens' Releases April 28",
+      "body": "Patch 7.5 'Trail to the Heavens' launches April 28, 2026, bridging the Dawntrail storyline into Evercold. The patch introduces the Beastmaster limited job and sets up the narrative threads that lead players to The Fourth. This is the final major content patch before the 8.0 expansion launches in January 2027.",
+      "sentiment": "positive",
+      "sources": [
+        "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
+      "id": "community-reaction-positive",
+      "region": "general",
+      "timestamp": "2026-04-25T16:00:00Z",
+      "headline": "Overall Community Reaction: Strongly Positive Post-Fanfest",
+      "body": "Synthesizing sentiment across Reddit, YouTube, gaming press, and official forums, the NA Fanfest 2026 reception is overwhelmingly positive. Key wins: the daily-to-weekly Adventurer Activity system (universally praised), Evangelion alliance raid (crowd favorite), dark aesthetic returning to form, and the Warrior of Light returning as protagonist. Remaining concerns: Reborn/Evolved mode confusion (SF6 comparison backlash), lingering Dawntrail skepticism, and 'prove it' mode from cautious veterans. Net sentiment: the most positive Fanfest reception since Shadowbringers was announced.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.resetera.com/threads/final-fantasy-xiv-evercold-announced-releases-on-january-2027.1500988/",
+        "https://screenrant.com/final-fantasy-14-evangelion-raids/",
+        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/"
+      ]
+    },
+    {
+      "id": "evercold-8.0-details",
+      "region": "na",
+      "timestamp": "2026-04-25T15:00:00Z",
+      "headline": "Evercold 8.0: Complete Expansion Details Roundup",
+      "body": "Comprehensive summary of all Evercold expansion details revealed at NA Fanfest 2026:\n\n**Setting**: The Fourth — a frozen reflection of Hydaelyn. The Godless Realms Saga begins.\n**Release**: January 27, 2027 (earlier than community expected).\n**Combat**: Reborn Mode (classic rotations) and Evolved Mode (fewer inputs, different rotations). Both viable for all content. New 8.0 jobs will only have Evolved Mode.\n**Progression**: Daily duties replaced by weekly Adventurer Activity system. Bank points across the week. Missed points recoverable.\n**Gear**: Armoury overhaul — iLvl reflects across all jobs. Materia remains job-specific. Action skins for ability customization.\n**Content**: Evangelion 'Ghosts of Desire' alliance raid, third raid difficulty tier (Normal → Extreme → Savage), new alliance raid series.\n**Platforms**: Nintendo Switch 2 port (August 2026). PS4 support ending at patch 8.3.\n**Seasons**: Two patches form one Season (.0+.1 = Season 1, etc.). No battle pass, no microtransactions.\n**Character**: Expanded creation options (neon hair, face paint layers, eye color separate from skin tone). New feline NPC race teased.\n**Free Trial**: Expanded to include Shadowbringers (through Patch 5.58).\n**Cross-DC**: Same-region cross-DC matchmaking for instanced content.\n\nMore details expected at EU Fanfest (Berlin, July 25-26) and JP Fanfest (Tokyo, Oct 31-Nov 1).",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.polygon.com/ffxiv-2026-fan-fest-keynote-recap-evangelion-raid-free-trial/",
+        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/",
+        "https://butwhytho.net/2026/04/ffxiv-fan-fest-patch-8-0-evercold/",
+        "https://simulationdaily.com/news/final-fantasy-xiv-expansion-details-switch-2/"
+      ]
+    },
+    {
+      "id": "job-rework-clarification",
+      "region": "na",
+      "timestamp": "2026-04-25T15:00:00Z",
+      "headline": "Dev Panel: No Major Job Reworks — Visual/Audio Updates Only",
+      "body": "Yoshi-P clarified during Q&A that jobs will not receive major mechanical reworks in 8.0. Instead, the focus is on visual and audio updates (VFX/SFX) to distinguish job identities. The community expressed disappointment - many hoped for substantive job identity changes to address homogenization concerns. The Reborn/Evolved system aims to help through different rotation patterns rather than fundamental rework. Forum post 'So Yoshi-P just confirmed jobs won't get a big rework in 8.0' went viral with concerns about job identity erosion persisting.",
+      "sentiment": "negative",
+      "sources": [
+        "https://forum.square-enix.com/ffxiv/threads/522078-2026-FanFests"
+      ]
+    },
     {
       "id": "dev-panel-evolved-mode-details",
       "region": "na",
