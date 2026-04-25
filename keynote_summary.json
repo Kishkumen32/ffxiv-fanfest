@@ -1,0 +1,128 @@
+{
+  "browserTitle": "FFXIV Evercold Fanfest 2026 - Keynote Summary",
+  "eyebrow": "NA Fanfest 2026 · Keynote recap",
+  "title": "Evercold keynote summary",
+  "overview": "The Evercold keynote framed 8.0 as a deliberate break from long-standing FFXIV routines. The clearest reveals focused on a new weekly progression model, season-based pacing, easier multi-job gearing, and much deeper character-expression systems.",
+  "tags": [
+    "8.0 direction",
+    "Progression overhaul",
+    "Character identity"
+  ],
+  "glanceTitle": "Topline reveals",
+  "glanceItems": [
+    "The daily roulette and tomestone routine is being reworked into a weekly activity model built around player flexibility.",
+    "Patch progression will be grouped into two-patch seasons, but Yoshida explicitly said this is not a season pass or extra monetization.",
+    "The armory and avatar systems are both being opened up so multi-job play and personal customization feel less restrictive."
+  ],
+  "stats": [
+    {
+      "label": "Source",
+      "value": "232 transcript segments"
+    },
+    {
+      "label": "Main focus",
+      "value": "Progression + character systems"
+    },
+    {
+      "label": "Topic clusters",
+      "value": "5 sections"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Evercold is a course correction for 8.0",
+      "summary": "Yoshida presented Evercold as the point where FFXIV stops relying only on familiar patterns and starts reworking core systems more aggressively.",
+      "points": [
+        {
+          "title": "8.0 is meant to feel meaningfully different",
+          "text": "The team said Evercold begins a broader 8.x push to change and evolve the game after 13 years of largely stable design. The goal is to make the game feel fresher for players while also giving the developers more room to build ambitious systems."
+        },
+        {
+          "title": "Anaheim only established the foundation",
+          "text": "The keynote repeatedly stressed that this Fan Fest was the first pass, not the full design dump. More specific rules and supporting details were saved for Berlin and Tokyo, so several reveals were positioned as direction-setting rather than final specs."
+        }
+      ]
+    },
+    {
+      "title": "A weekly activity model replaces the daily grind",
+      "summary": "The biggest systemic reveal was a shift away from daily roulette pressure and toward a weekly structure built around broader choice.",
+      "points": [
+        {
+          "title": "The new Adventure Activity Interface becomes the weekly hub",
+          "text": "A new Adventure Activity Interface will centralize character growth, gear upgrades, duty progression, weekly goals, and related rewards. Instead of optimizing one daily checklist over and over, players will manage their progress from a single weekly-facing screen."
+        },
+        {
+          "title": "Different playstyles can earn the same progress",
+          "text": "Activities will award points that raise an overall activity level and unlock gear or other rewards. Some missions are one-time weekly clears while others are repeatable, which means story players, roulettes players, and grind-focused players can all move forward in different ways."
+        },
+        {
+          "title": "The team is considering a one-week catch-up buffer",
+          "text": "Yoshida said they are looking at a feature that would let players recover unearned points from the previous week after finishing the current week. That would reduce reset anxiety without removing the weekly structure altogether."
+        },
+        {
+          "title": "Real-life schedules are the design target",
+          "text": "The keynote openly framed this change as a lifestyle improvement. Players should be able to log in daily, binge on weekends, or split their time however they want without feeling punished for skipping the most efficient daily route."
+        }
+      ]
+    },
+    {
+      "title": "Progression is being reorganized into seasons",
+      "summary": "Evercold keeps the patch cadence, but the team wants a clearer progression vocabulary that better explains how item growth works over time.",
+      "points": [
+        {
+          "title": "A season means two patches, not a battle pass",
+          "text": "The keynote immediately clarified that the new season language does not mean free-to-play monetization, extra fees, or a paid pass. In Evercold, a season simply refers to an even patch and its following odd patch being treated as one progression block."
+        },
+        {
+          "title": "The new label is meant to smooth odd-patch motivation drops",
+          "text": "Yoshida called out how gearing and progression motivation can flatten during odd patches such as x.1 and x.3. Grouping those releases into seasons is meant to make the structure easier to understand and easier to follow."
+        },
+        {
+          "title": "Patch timing is still under review",
+          "text": "The team acknowledged that patch gaps have stretched out in recent years and said they want to tighten them where possible. Exact timing and the full progression diagram were held back for a later Fan Fest presentation."
+        }
+      ]
+    },
+    {
+      "title": "The armory system is being opened up for multi-job play",
+      "summary": "Evercold keeps FFXIV's one-character-many-jobs identity, but lowers the friction of actually gearing more than one role.",
+      "points": [
+        {
+          "title": "Job leveling stays separate",
+          "text": "Players will still level each job individually in 8.0, so the sense of investment in each class is not being removed. The rework is aimed at reducing gearing pain rather than collapsing job progression into one shared track."
+        },
+        {
+          "title": "Your highest item level can reflect onto other jobs",
+          "text": "The new armory direction lets players carry the value of their highest item level over to other jobs. That should make it much easier to swap roles, help friends, or join content without having every secondary job feel permanently undergeared."
+        },
+        {
+          "title": "Min-maxing still has a place",
+          "text": "Yoshida noted that deeper optimization details are still being finalized and that things like materia or other substat tuning are likely to remain meaningful. The convenience floor is rising, but dedicated gearing still sounds like it will matter for players who want to push harder."
+        }
+      ]
+    },
+    {
+      "title": "Character expression is becoming a full expansion pillar",
+      "summary": "The keynote treated avatar identity as a major Evercold theme, with both cosmetic systems and creation tools getting sustained attention.",
+      "points": [
+        {
+          "title": "Character action skins add new animation-level customization",
+          "text": "The team is introducing character action skins that change the presentation of certain player animations. That gives players another way to make their Warrior of Light feel distinct beyond gear and glamours alone."
+        },
+        {
+          "title": "The post-7.0 creator can now support more options",
+          "text": "Because the 7.0 graphics update raised the underlying visual ceiling, the character creator can now take on a larger customization load. The keynote specifically mentioned expanded options around facial presentation, layers, face paint, and other appearance details."
+        },
+        {
+          "title": "Gear pieces will support new visibility toggles",
+          "text": "The showcase included examples of turning individual gear components on and off, similar in spirit to visor toggles but applied more broadly to parts like belts and waist elements. The intent is to let players tune silhouettes around glamour concept, season, or mood."
+        },
+        {
+          "title": "Customization updates will continue through 8.x",
+          "text": "The presenters said the 8.0 reveals are only the starting point, with more character customization updates planned for 8.1, 8.2, and 8.3. Personal expression is being treated as an ongoing Evercold investment, not a one-patch side feature."
+        }
+      ]
+    }
+  ],
+  "sourceNote": "Condensed from the keynote transcript. Several UI mockups and exact rules were described on stage as early work-in-progress and may change before release."
+}

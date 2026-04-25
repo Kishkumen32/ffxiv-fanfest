@@ -1,0 +1,120 @@
+{
+  "browserTitle": "FFXIV Evercold Fanfest 2026 - Development Panel Summary",
+  "eyebrow": "NA Fanfest 2026 · Development panel recap",
+  "title": "Evercold development panel summary",
+  "overview": "The development panel drilled into Evercold's battle overhaul and framed Evolve mode as a way to make jobs easier to pick up, more distinct to master, and less constrained by the current two-minute burst meta. The clearest takeaways centered on job identity, battle-system freedom, and a simpler on-ramp for swapping roles.",
+  "tags": [
+    "Battle overhaul",
+    "Evolve mode",
+    "Job identity"
+  ],
+  "glanceTitle": "Topline reveals",
+  "glanceItems": [
+    "Most party-wide attack synergies are being removed so jobs and encounters are no longer forced into rigid 120-second burst cycles.",
+    "Evolve mode examples focused on giving jobs clearer identities and more flexible decision-making, especially for Dragoon, White Mage, and Bard.",
+    "All 21 jobs are getting Evolve-mode designs, with level-50 core hotbars, fewer buttons, and main/off tank specializations in the new system."
+  ],
+  "stats": [
+    {
+      "label": "Sources",
+      "value": "Panel transcript + YouTube capture"
+    },
+    {
+      "label": "Main focus",
+      "value": "Battle system redesign"
+    },
+    {
+      "label": "Topic clusters",
+      "value": "5 sections"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Evercold's battle pitch is freedom plus accessibility",
+      "summary": "The panel positioned Reborn and Evolve modes as a way to widen the audience for battle content without flattening job identity.",
+      "points": [
+        {
+          "title": "The new modes are meant to serve new, returning, and veteran players",
+          "text": "The closing explanation framed Reborn and Evolve modes as an intuitive control scheme that helps newer players learn battle content while also giving returning players and long-time raiders more ways to approach each job. The stated goal was not simplification for its own sake, but more entry points and more viable styles of play."
+        },
+        {
+          "title": "The overhaul is broad, not job-by-job experimentation",
+          "text": "The panel said all 21 jobs are receiving Evolve-mode designs, even though only a handful were demonstrated on stage. The presenters also emphasized that the showcased rotations and actions are still in development and may change before launch."
+        }
+      ]
+    },
+    {
+      "title": "The job demos highlighted stronger identities",
+      "summary": "The clearest readable examples in the transcript focused on how Evolve mode changes the feel of individual jobs rather than just trimming buttons.",
+      "points": [
+        {
+          "title": "Dragoon leans harder into jumps and cleaner flow",
+          "text": "The team said Dragoon's Evolve mode was built around its signature jump attacks and improved Blood of the Dragon handling so the job feels slicker and tighter. They also noted that, like Paladin, Dragoon had action bloat that they intentionally reduced during the redesign."
+        },
+        {
+          "title": "White Mage turns healing into active offensive value",
+          "text": "White Mage gained a Sanctuary Gauge that fills through healing and can be spent on Holy Sanctuary for damage, directly addressing the old tension where GCD healing felt like a DPS loss. The panel also described instant basic attack spells, combo variation on repeated casts, consolidated tools, and mobility help so healer fundamentals are easier to learn without losing offensive tempo."
+        },
+        {
+          "title": "Bard is being rebuilt around flexible song choice",
+          "text": "Bard's Evolve mode uses a performance gauge to spend songs in whatever order best fits the encounter, with each song granting a different party utility and unlocking different follow-up actions. The result is a support job that still helps the party, but decides its sequencing based on the fight instead of following one static script every pull."
+        }
+      ]
+    },
+    {
+      "title": "The two-minute burst meta is being deliberately broken up",
+      "summary": "The most important battle-wide announcement was the removal or redesign of most synergy actions that raise party damage.",
+      "points": [
+        {
+          "title": "Most party attack-buff synergies are going away",
+          "text": "The panel said most synergy actions that exist mainly to raise party attack will be removed or have their effects changed in both modes. The developers made it clear that this is one of Evercold's central battle-system decisions, not a small balance pass."
+        },
+        {
+          "title": "The current system was limiting both players and encounter design",
+          "text": "Tamaki and Yoshida explained that synergy actions force too many jobs into rigid 120-second cycles, punish the whole party when one rotation goes wrong, and make bosses feel built around burst windows instead of more natural pacing. They also said those restrictions have made it harder to give jobs stronger individuality without causing balance problems."
+        },
+        {
+          "title": "Support flavor can remain without locking rotations",
+          "text": "The team noted that some jobs, especially support-oriented ones, can still keep utility that reinforces their personality. The key difference is that those tools should no longer dictate one mandatory party timeline every two minutes."
+        }
+      ]
+    },
+    {
+      "title": "Evolve mode is being built to feel easier to learn quickly",
+      "summary": "A large part of the panel focused on when players receive actions and how fast they can understand a job's complete loop.",
+      "points": [
+        {
+          "title": "Core hotbars should be complete by level 50",
+          "text": "The plan is for each Evolve-mode job to have its necessary core actions in place by around level 50. After that point, progression will mostly modify existing buttons through added effects or derivative actions instead of endlessly adding brand-new slots."
+        },
+        {
+          "title": "Level sync and job onboarding should feel less stripped down",
+          "text": "Because the full loop arrives earlier, lower-level synced duties should no longer make jobs feel as empty or overly simplified. The presenters specifically said this approach should make it easier for players to understand the difference between Reborn and Evolve modes much earlier."
+        },
+        {
+          "title": "Button count and icon density are being reduced",
+          "text": "The panel said Evolve mode significantly cuts down the number of button presses and visible icons so the new play styles are easier to grasp. That simplification is meant to encourage players to branch out into more jobs for more duties, not lock them into a single comfort pick forever."
+        }
+      ]
+    },
+    {
+      "title": "Tanks are being split into main and off specialties",
+      "summary": "Evercold's Evolve mode introduces a clearer distinction inside the tank role while still trying to avoid party-comp hard locks.",
+      "points": [
+        {
+          "title": "Main tanks and off tanks will have distinct specialties",
+          "text": "Main tanks are being positioned around mitigation and counterplay, while off tanks are leaning more into ally protection and enemy attack reduction. The panel specifically said Paladin and Evercold's new 8.0 tank will sit on the main-tank side of that split."
+        },
+        {
+          "title": "High-end groups can optimize the pairing, but regular content should stay flexible",
+          "text": "The explanation compared the concept to pure and barrier healers: the distinction matters, but parties are not supposed to feel blocked from clearing normal content because they picked the wrong subtype. Savage and Ultimate groups, however, should be able to squeeze more value from bringing both specialties together."
+        },
+        {
+          "title": "8.0 is only the beginning of battle changes",
+          "text": "The presenters closed by saying Evercold is the start of a longer battle-system evolution rather than the finish line. Their stated aim is to keep refining the system after 8.0 so encounters, jobs, and player choices stay interesting for years to come."
+        }
+      ]
+    }
+  ],
+  "sourceNote": "Condensed from the translated development panel transcript and cross-checked against the clearer panel sections in the full YouTube transcript. Several showcased actions were described on stage as still in development."
+}
