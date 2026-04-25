@@ -185,10 +185,14 @@ function renderCountdowns() {
     }
 
     countdownElement.textContent = "Event ended";
-    statusElement.textContent = "Ended";
+    statusElement.textContent = "ENDED";
     statusElement.classList.add("is-ended");
     metaElement.textContent = `${event.location} · Archive/VOD watch only.`;
   });
+}
+
+function isBingoItemChecked(item, savedState = {}) {
+  return savedState[item.id] ?? Boolean(item.checked ?? item.free);
 }
 
 function bindStreamSelector() {
@@ -564,7 +568,7 @@ function renderBingoGrid() {
 
   grid.innerHTML = items
     .map((item) => {
-      const isChecked = savedState[item.id] ?? Boolean(item.free);
+      const isChecked = isBingoItemChecked(item, savedState);
       const squareClasses = ["bingo-square"];
 
       if (isChecked) {
@@ -595,7 +599,7 @@ function renderBingoGrid() {
       const squareId = button.dataset.bingoId;
       const latestState = readBingoState();
       const item = items.find((entry) => entry.id === squareId);
-      const currentValue = latestState[squareId] ?? Boolean(item?.free);
+      const currentValue = item ? isBingoItemChecked(item, latestState) : false;
 
       latestState[squareId] = !currentValue;
       localStorage.setItem(BINGO_STORAGE_KEY, JSON.stringify(latestState));
@@ -612,7 +616,7 @@ function updateBingoProgress(items, savedState) {
   }
 
   const total = items.length;
-  const checked = items.filter((item) => savedState[item.id] ?? Boolean(item.free)).length;
+  const checked = items.filter((item) => isBingoItemChecked(item, savedState)).length;
   progressElement.textContent = `${checked} / ${total} marked`;
 }
 
