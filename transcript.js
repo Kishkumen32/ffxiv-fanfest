@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let transcriptData = [];
 
+  const normalizeTranscriptData = (data) => {
+    if (Array.isArray(data)) {
+      return data;
+    }
+
+    if (Array.isArray(data?.segments)) {
+      return data.segments;
+    }
+
+    throw new Error('Transcript JSON must be an array or an object with a segments array.');
+  };
+
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -49,9 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loadTranscript = async () => {
     const transcriptFile = transcriptContainer.dataset.transcript;
+
     try {
       const response = await fetch(transcriptFile);
-      transcriptData = await response.json();
+
+      if (!response.ok) {
+        throw new Error(`Request for ${transcriptFile} failed with ${response.status}`);
+      }
+
+      transcriptData = normalizeTranscriptData(await response.json());
       renderTranscript(transcriptData);
     } catch (error) {
       console.error('Error loading transcript:', error);
