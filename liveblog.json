@@ -1,6 +1,6 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-25T18:00:00Z",
+  "updatedAt": "2026-04-25T19:00:00Z",
   "entries": [
     {
       "id": "patch-7.5-release",
@@ -11,6 +11,61 @@
       "sentiment": "positive",
       "sources": [
         "https://na.finalfantasyxiv.com/lodestone/topics/detail/3fbb8a7b241ae9a909fd15b59c8978eb997a3cc3"
+      ]
+    },
+    {
+      "id": "evercold-trailer-metrics",
+      "region": "general",
+      "timestamp": "2026-04-25T14:00:00Z",
+      "headline": "Official Evercold Trailer: 196.5K Views in 24 Hours",
+      "body": "The official Evercold teaser trailer reached 196,500 views with 17,400 likes (8.9% engagement rate) within the first 24 hours. Community comments praise the 'cinematography' and 'older FF logo feel.' Reaction video from JMulls drew 833 views with 54 likes. Viewer sentiment overwhelmingly positive with phrases like 'We are so back' trending on social media.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=Dk3rfUC80DE"
+      ]
+    },
+    {
+      "id": "gaming-press-return-to-form",
+      "region": "general",
+      "timestamp": "2026-04-25T13:00:00Z",
+      "headline": "Gaming Press: 'Return to Form' After Dawntrail",
+      "body": "Major gaming outlets (Polygon, IGN, Noisy Pixel, VGChartz, Radio Times) frame Evercold as Yoshi-P listening to player feedback. Radio Times: 'Evercold is proof enough that Yoshi-P and his team are far from done with the game.' The dominant narrative is 'FFXIV isn't done' - redemption arc after Dawntrail's mixed reception.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.radiotimes.com/technology/gaming/ff14-reveals-next-expansion-final-fantasy-xiv-evercold-newsupdate/"
+      ]
+    },
+    {
+      "id": "yoshi-ptimeline-quote",
+      "region": "na",
+      "timestamp": "2026-04-25T12:00:00Z",
+      "headline": "Yoshi-P Jokes About 9-Month Timeline",
+      "body": "During the keynote, Yoshi-P quipped that 9 months until January 2027 is a 'frighteningly short time for developers.' The community found this humorous - the unusual transparency about the timeline was seen as a confidence signal. Previously, FFXIV often withheld release dates until much closer to launch.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.radiotimes.com/technology/gaming/ff14-reveals-next-expansion-final-fantasy-xiv-evercold-newsupdate/"
+      ]
+    },
+    {
+      "id": "level-cap-110",
+      "region": "general",
+      "timestamp": "2026-04-25T11:00:00Z",
+      "headline": "Level Cap Increased to 110 in Evercold",
+      "body": "Evercold raises the level cap from 100 to 110. This is the first level increase since Endwalker (when it went from 80 to 90). Combined with the weekly progression system overhaul, this represents significant vertical progression for the expansion.",
+      "sentiment": "positive",
+      "sources": [
+        "https://noisypixel.net/final-fantasy-xiv-evercold-expansion-8-0-details/"
+      ]
+    },
+    {
+      "id": "switch-2-subscription-deal",
+      "region": "general",
+      "timestamp": "2026-04-25T10:00:00Z",
+      "headline": "Switch 2: 50% Subscription Discount for Existing Players",
+      "body": "FFXIV on Switch 2 launches August 2026 with a unique pricing model: existing players on other platforms get 50% off the Switch 2 subscription. This is notable as previous FFXIV ports have not offered cross-platform discounts. Also includes one-month early access period.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.vgchartz.com/article/467640/final-fantasy-xiv-coming-to-switch-2-in-august-evercold-expansion-announced/"
       ]
     },
     {
