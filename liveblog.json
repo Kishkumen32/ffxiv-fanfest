@@ -1,7 +1,101 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-24T00:00:00Z",
+  "updatedAt": "2026-04-24T22:00:00Z",
   "entries": [
+    {
+      "id": "community-reaction-youtube",
+      "region": "general",
+      "timestamp": "2026-04-24T22:00:00Z",
+      "headline": "YouTube Reaction: 'Yoshi-P Just Saved 8.0'",
+      "body": "YouTube reaction videos are flooding in with overwhelmingly positive sentiment. Key themes: 'dark vibe & I'm loving it', '8.0 is STUNNING', 'Yoshi-P just saved 8.0'. The official Evercold Teaser Trailer has 196.5K views with 17.4K likes (8.9% engagement rate). Popular FFXIV content creators like Xenosys Vex posted reactions. Community is excited about the dark aesthetic returning to form after Dawntrail.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=Dk3rfUC80DE",
+        "https://www.youtube.com/watch?v=s_RasCdmME4"
+      ]
+    },
+    {
+      "id": "community-reaction-gaming-news",
+      "region": "general",
+      "timestamp": "2026-04-24T21:45:00Z",
+      "headline": "Gaming Press: 'Most Significant Update Since A Realm Reborn'",
+      "body": "Gaming news outlets frame Evercold as the most substantial systemic overhaul since A Realm Reborn. Polygon: 'Reborn Mode and Evolved Mode combat options.' GamesRadar+: 'won't be a full rebirth...but it's not far off.' MassivelyOP: 'Ever-Evolving FFXIV.' The Nerd Stash: 'evolution of this legendary MMO in many impactful ways.' Coverage is overwhelmingly positive with focus on weekly systems and time-respecting design.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.polygon.com/ffxiv-2026-fan-fest-keynote-recap-evangelion-raid-free-trial/",
+        "https://www.gamesradar.com/games/final-fantasy/final-fantasy-14-evercold-is-the-mmos-next-big-expansion-and-its-coming-early-next-year/",
+        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/"
+      ]
+    },
+    {
+      "id": "battle-mode-confusion",
+      "region": "na",
+      "timestamp": "2026-04-24T21:30:00Z",
+      "headline": "Battle System Confusion: Street Fighter 6 Comparison Backlash",
+      "body": "The Reborn/Evolved Mode announcement sparked confusion and concern. The Nerd Stash: 'everyone felt a bit confused by it.' Yoshi-P's comparison to Street Fighter 6's Classic/Modern controls drew mixed reactions - SF6's Modern controls were 'largely panned by fans.' Yoshi-P clarified Evolved might be 'slightly more powerful' but both modes will be balanced and supported for all content. Community concern: is FFXIV 'dumbing down' combat?",
+      "sentiment": "mixed",
+      "sources": [
+        "https://thenerdstash.com/ffxiv-announces-its-next-expansion-evercold-evolving-almost-everything-of-the-critically-acclaimed-mmo/",
+        "https://www.cgmagonline.com/news/evercold-final-fantasy-xiv-new-era-2027/"
+      ]
+    },
+    {
+      "id": "feline-npc-instant-favorite",
+      "region": "na",
+      "timestamp": "2026-04-24T21:15:00Z",
+      "headline": "New Feline NPCs: 'Must Be Protected' — Instant Fan Favorite",
+      "body": "The cat-like NPCs shown in Evercold concept art immediately became a fan favorite. CG Magazine: 'among the concepts was a new feline NPC race which, judging by the attendees' reactions, has immediately become a fan favourite, and must be protected.' The cute feline designs generated significant social media buzz and fan art within hours of the announcement.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.cgmagonline.com/news/evercold-final-fantasy-xiv-new-era-2027/"
+      ]
+    },
+    {
+      "id": "ps4-support-ending",
+      "region": "general",
+      "timestamp": "2026-04-24T21:00:00Z",
+      "headline": "PS4 Support Ending at 8.3 — 'Two Years to Get a PS5'",
+      "body": "Yoshi-P joked that players have 'two years' to get a PS5, as the team only expects to support PS4 through patch 8.3. This marks the end of PlayStation 4 support for FFXIV. Siliconera: 'Yoshida joked people have two years to get a PS5.' The announcement was received with understanding given the Switch 2 port and increasing hardware requirements.",
+      "sentiment": "neutral",
+      "sources": [
+        "https://www.siliconera.com/ffxiv-switch-2-version-coming-ps4-support-planned-through-8-3/"
+      ]
+    },
+    {
+      "id": "return-to-player-hero",
+      "region": "general",
+      "timestamp": "2026-04-24T20:30:00Z",
+      "headline": "Return to 'Player as Hero' — Addressing Dawntrail Criticism",
+      "body": "Square Enix appears to have learned from Dawntrail's mixed reception. Simulation Daily: 'the role of the protagonist will return to the Warrior of Light, basically, our player character, which is certainly a change of pace that many will appreciate.' The trailer's story focus on the Warrior of Light as hero (rather than Wuk Lamat's focus) addresses a key community complaint about Dawntrail.",
+      "sentiment": "positive",
+      "sources": [
+        "https://simulationdaily.com/news/final-fantasy-xiv-expansion-details-switch-2/"
+      ]
+    },
+    {
+      "id": "evangelion-crowd-favorite",
+      "region": "na",
+      "timestamp": "2026-04-24T20:15:00Z",
+      "headline": "Evangelion Crossover: 'Crowd Went Absolutely Wild'",
+      "body": "The Evangelion collaboration was the immediate crowd favorite at the keynote. Screen Rant: 'The crowd went absolutely wild when the iconic EVA Unit-01 design popped on screen.' CG Magazine: 'Yoshida is a self-described Evangelion otaku and feels the pressure to do right by this very unexpected crossover.' Screen Rant: 'YoRHA: Dark Apocalypse was incredibly popular. The Evangelion raid could end up bringing in even more players.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://screenrant.com/final-fantasy-14-evangelion-raids/",
+        "https://www.cgmagonline.com/news/evercold-final-fantasy-xiv-new-era-2027/"
+      ]
+    },
+    {
+      "id": "community-sentiment-updated",
+      "region": "general",
+      "timestamp": "2026-04-24T19:00:00Z",
+      "headline": "Community Sentiment: Positive with Notable Caveats",
+      "body": "Updated sentiment analysis shows strong initial excitement tempered by Dawntrail caution. Overall: POSITIVE with notable caveats. Key positive: Weekly system change praised, Evangelion crossover generating major excitement, dark aesthetic 'return to form.' Key concerns: Battle mode confusion, lingering Dawntrail skepticism, 'prove it' mode persists. ResetEra users: 'Didn't care for Dawntrail but expansion launches are peak MMO so I'll be there anyway.' Official forums: 'game often feels more like a paid waiting simulator.'",
+      "sentiment": "mixed",
+      "sources": [
+        "https://www.resetera.com/threads/final-fantasy-xiv-evercold-announced-releases-on-january-2027.1500988/",
+        "https://forum.square-enix.com/ffxiv/threads/522078-2026-FanFests"
+      ]
+    },
     {
       "id": "free-trial-shadowbringers",
       "region": "na",
