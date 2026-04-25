@@ -17,7 +17,7 @@
   "stats": [
     {
       "label": "Sources",
-      "value": "Panel transcript + YouTube capture"
+      "value": "6 sources, including Rion's YouTube analysis"
     },
     {
       "label": "Main focus",
@@ -25,7 +25,7 @@
     },
     {
       "label": "Topic clusters",
-      "value": "5 sections"
+      "value": "6 sections"
     }
   ],
   "sections": [
@@ -114,7 +114,37 @@
           "text": "The presenters closed by saying Evercold is the start of a longer battle-system evolution rather than the finish line. Their stated aim is to keep refining the system after 8.0 so encounters, jobs, and player choices stay interesting for years to come."
         }
       ]
+    },
+    {
+      "title": "Rion's Evolved Mode Job Breakdowns",
+      "summary": "Content creator Rion recorded an in-depth analysis at 4:30 AM after staying up all night, offering a more player-facing read on the four Evolved Mode jobs shown during the Development Panel and what they could mean for 8.0 combat.",
+      "points": [
+        {
+          "title": "Paladin's counter-attack loop could become its defining skill test",
+          "text": "Rion highlighted Holy Sheltron's new timing game as one of the panel's most interesting reveals. In his reading, taking damage within eight seconds grants Answer Crest for a powerful GCD counter, while landing that timing within four seconds appears to unlock an even stronger version. That turns Paladin into a job that is constantly trying to convert defensive reads into offensive payoffs, while context-sensitive actions such as Provoke, Shield Lob, and the gap closer reinforce a more reactive toolkit whether the target is an enemy or an ally."
+        },
+        {
+          "title": "Dragoon's new positional structure looks like a true identity play",
+          "text": "Rion called out Dragoon's rework as one of the boldest ideas shown on stage. Instead of the familiar flank-versus-rear split, positionals now appear to branch into left, right, and back, with Sinister, Dexter, and Heavensward all needing to be completed before one can repeat. He said he \"desperately hopes\" this left-right positional split stays Dragoon-exclusive, because it creates a genuinely distinct baseline that could make the job feel unlike anything else in the roster."
+        },
+        {
+          "title": "White Mage looked approachable, but not yet especially exciting",
+          "text": "Rion described White Mage as the \"least convincing showing\" of the day, saying it came across more as an easy mode than a compelling evolution. The visible changes included castless damage spells, a new Sanctity gauge, and the merger of Aqua Veil and Divine Benison, all of which point toward a cleaner and more approachable healer kit. His reservation was less about accessibility itself and more about hoping White Mage becomes the intentionally simple healer while the other three retain noticeably more texture and decision-making."
+        },
+        {
+          "title": "Bard's performance gauge may make the job feel faster and freer",
+          "text": "For Bard, Rion zeroed in on Wanderer's Volley as a standout addition: a directional GCD gap closer with three charges that doubles as both mobility and damage. He framed it as exactly the kind of move that could make Bard feel snappy and responsive in motion, while the performance gauge cycling through all three songs before repeating suggests a more deliberate rotational arc than a single fixed loop."
+        },
+        {
+          "title": "The tank role split now sounds structurally confirmed",
+          "text": "Rion also treated the main-tank versus off-tank divide as one of the day's clearest system-level takeaways. In his summary, Paladin and the new tank sit on the main-tank side, built around countering enemy attacks, while Warrior, Dark Knight, and Gunbreaker fill the off-tank lane with actions that lower incoming enemy damage. That framing supports the panel's broader message that Evercold wants stronger role identities without turning regular content into a composition check."
+        },
+        {
+          "title": "His final verdict was cautious, but firmly in favor of the direction",
+          "text": "Rion's conclusion was that Evolved Mode is very clearly where Final Fantasy XIV is heading, even if players may want more time to process the scale of the change. He argued that 8.0 is set to make the game feel fundamentally different from any prior version, while remaining interested and tentative about the details rather than blindly celebratory. In the end, his stance was unmistakable: if the team executes well, he would rather see the game move toward this ambitious new direction than cling to the old status quo."
+        }
+      ]
     }
   ],
-  "sourceNote": "Condensed from the translated development panel transcript and cross-checked against the clearer panel sections in the full YouTube transcript. Several showcased actions were described on stage as still in development."
+  "sourceNote": "Condensed from the translated development panel transcript and cross-checked against the clearer panel sections in the full YouTube transcript. Several showcased actions were described on stage as still in development. Analysis sourced from Rion's YouTube video: https://www.youtube.com/watch?v=pQZEOF6WYJ4"
 }
