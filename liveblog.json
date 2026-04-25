@@ -196,62 +196,6 @@
       ]
     },
     {
-      "id": "dev-panel-evolved-mode-details",
-      "region": "na",
-      "timestamp": "2026-04-25T01:00:00Z",
-      "headline": "Dev Panel: Evolved Mode is 'Not Easy Mode' — Different Rotations, Fewer Inputs",
-      "body": "Hikaru Tamaki (Battle System Designer) clarified Evolved Mode details during the Development Panel. Evolved is NOT simplified — it's designed to 'emphasize individuality' with different rotations and fewer inputs. Think of it as two variants of a job (like two different Dragoons) rather than Normal/Easy mode. Both modes viable for all content. Toggle available outside combat. New 8.0 jobs will ONLY have Evolved Mode (slightly more powerful for new jobs).",
-      "sentiment": "positive",
-      "sources": [
-        "https://simulationdaily.com/news/final-fantasy-xiv-expansion-details-switch-2/",
-        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/"
-      ]
-    },
-    {
-      "id": "dev-panel-armory-overhaul",
-      "region": "na",
-      "timestamp": "2026-04-25T00:45:00Z",
-      "headline": "Dev Panel: Armoury System Overhaul — iLvl Reflects Across All Jobs",
-      "body": "Major Armoury changes announced: Your highest item level now reflects across ALL jobs. No more farming separate gear for each job. Exception: Materia still job-specific for optimization. Enables easier party filling and job swapping. Yoshi-P: 'Players will also be gaining action skins to customize specific job abilities.' More details coming at EU Fanfest.",
-      "sentiment": "positive",
-      "sources": [
-        "https://butwhytho.net/2026/04/ffxiv-fan-fest-patch-8-0-evercold/"
-      ]
-    },
-    {
-      "id": "dev-panel-action-skins",
-      "region": "na",
-      "timestamp": "2026-04-25T00:30:00Z",
-      "headline": "Dev Panel: Action Skins Coming — Customize Ability Visuals",
-      "body": "New 'action skin' system announced for ability customization. Players can customize the visual appearance of specific job abilities. Yoshi-P emphasized character-focused progression. More details coming at EU Fanfest (Berlin, July 2026). This is part of the broader UI overhaul moving toward character-focused design.",
-      "sentiment": "positive",
-      "sources": [
-        "https://massivelyop.com/2026/04/24/final-fantasy-xivs-fan-festival-reveals-evercold-for-january-27-and-a-major-rework-of-the-games-major-progression/"
-      ]
-    },
-    {
-      "id": "dev-panel-no-microtransactions",
-      "region": "na",
-      "timestamp": "2026-04-25T00:15:00Z",
-      "headline": "Dev Panel: 'No Battle Pass, No Microtransactions' — Seasons Are Free",
-      "body": "When Yoshi-P announced the 'Season' system, the audience groaned (expecting battle pass). He quickly clarified: NO increased prices, NO microtransactions, NO Battle Pass. Seasons are just language change to group even+odd patches together. Yoshi-P: 'There would be no increased prices, microtransactions, or Battlepasses to increase player costs.' Community relieved.",
-      "sentiment": "positive",
-      "sources": [
-        "https://butwhytho.net/2026/04/ffxiv-fan-fest-patch-8-0-evercold/"
-      ]
-    },
-    {
-      "id": "dev-panel-live-demo",
-      "region": "na",
-      "timestamp": "2026-04-25T00:00:00Z",
-      "headline": "Dev Panel: Live Evolved Mode Gameplay Demo",
-      "body": "The Development Panel featured live gameplay demo of Evolved Mode combat. Showcased the difference between Reborn and Evolved rotations in real-time. Both modes shown completing the same content. This was the first public look at how the new combat system plays. More detailed gameplay coming in future streams.",
-      "sentiment": "positive",
-      "sources": [
-        "https://www.youtube.com/watch?v=_aCGzxWczCM"
-      ]
-    },
-    {
       "id": "community-reaction-youtube",
       "region": "general",
       "timestamp": "2026-04-24T22:00:00Z",

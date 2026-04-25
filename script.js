@@ -63,6 +63,8 @@ const LIVEBLOG_REGIONS = {
   }
 };
 
+const USER_TIME_ZONE = detectUserTimeZone();
+
 const appState = {
   bingoData: { items: [] },
   liveblogData: { entries: [] },
@@ -815,13 +817,25 @@ function formatTimestamp(value) {
     return "Invalid timestamp";
   }
 
-  return date.toLocaleString("en-US", {
-    month: "short",
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: USER_TIME_ZONE,
+    month: "long",
     day: "numeric",
     year: "numeric",
     hour: "numeric",
-    minute: "2-digit"
+    minute: "2-digit",
+    timeZoneName: "short"
   });
+
+  return formatter.format(date);
+}
+
+function detectUserTimeZone() {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone || undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 function getTwitchParentHost() {
