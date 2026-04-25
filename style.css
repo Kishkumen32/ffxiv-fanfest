@@ -1663,6 +1663,48 @@ select {
   line-height: 1.7;
 }
 
+.summary-attribution {
+  display: grid;
+  gap: 1rem;
+}
+
+.summary-attribution-block {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(159, 214, 255, 0.14);
+  background: rgba(13, 28, 46, 0.42);
+}
+
+.summary-attribution-block--commentary {
+  border-color: rgba(244, 200, 120, 0.18);
+  background: rgba(44, 29, 11, 0.28);
+}
+
+.summary-attribution-label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.summary-attribution-source {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.summary-commentary-quote {
+  margin: 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(244, 200, 120, 0.4);
+  color: var(--text-soft);
+  font-style: italic;
+}
+
 .summary-source-note {
   padding-inline: 0.2rem;
   color: var(--text-muted);

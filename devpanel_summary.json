@@ -3,8 +3,15 @@
   "eyebrow": "NA Fanfest 2026 · Development panel recap",
   "title": "Evercold development panel summary",
   "overview": "The development panel drilled into Evercold's battle overhaul and framed Evolve mode as a way to make jobs easier to pick up, more distinct to master, and less constrained by the current two-minute burst meta. The clearest takeaways centered on job identity, battle-system freedom, and a simpler on-ramp for swapping roles.",
-  "overviewCommentary": "Rion's broad read was that Evolved mode is clearly the future of XIV: players can ask for a slower rollout, but they cannot really avoid where the combat team is trying to take the game.",
+  "overviewCommentary": "Rion's broad read was that Evolved mode is clearly the future direction for XIV's combat, even if the team still has room to refine how aggressively that shift lands in 8.0.",
   "overviewCommentaryLabel": "Rion takeaway",
+  "attribution": {
+    "officialLabel": "Official dev panel info",
+    "officialSource": "Summarized from the translated NA Fanfest 2026 development panel transcript and on-stage statements.",
+    "commentaryLabel": "Rion commentary",
+    "commentarySource": "Rion (YouTube) — https://www.youtube.com/watch?v=pQZEOF6WYJ4. Used only when a point needs extra interpretation or framing beyond the official panel wording.",
+    "note": "If a card does not include a Rion commentary block, treat it as official panel information only."
+  },
   "tags": [
     "Battle overhaul",
     "Evolve mode",
@@ -13,17 +20,17 @@
   "glanceTitle": "Topline reveals",
   "glanceItems": [
     "Most party-wide attack synergies are being removed so jobs and encounters are no longer forced into rigid 120-second burst cycles.",
-    "Evolve mode examples focused on giving jobs clearer identities and more flexible decision-making, especially for Dragoon, White Mage, and Bard.",
+    "Evolve mode examples focused on giving jobs clearer identities and more flexible decision-making, especially for Paladin, Dragoon, White Mage, and Bard.",
     "All 21 jobs are getting Evolve-mode designs, with level-50 core hotbars, fewer buttons, and main/off tank specializations in the new system."
   ],
   "stats": [
     {
-      "label": "Sources",
-      "value": "6 sources, including Rion's YouTube analysis"
+      "label": "Official source",
+      "value": "Dev panel transcript"
     },
     {
-      "label": "Main focus",
-      "value": "Battle system redesign"
+      "label": "Commentary source",
+      "value": "Rion (YouTube)"
     },
     {
       "label": "Topic clusters",
@@ -37,11 +44,19 @@
       "points": [
         {
           "title": "The new modes are meant to serve new, returning, and veteran players",
-          "text": "The closing explanation framed Reborn and Evolve modes as an intuitive control scheme that helps newer players learn battle content while also giving returning players and long-time raiders more ways to approach each job. The stated goal was not simplification for its own sake, but more entry points and more viable styles of play."
+          "official": "The panel's closing explanation said Reborn and Evolve are intended to help newer players learn battle content while also giving returning players and veterans more ways to approach each job.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion framed this as a broader accessibility push: the team is trying to create more entry points without turning the system into a blanket simplification pass."
+          }
         },
         {
           "title": "The overhaul is broad, not job-by-job experimentation",
-          "text": "The panel said all 21 jobs are receiving Evolve-mode designs, even though only a handful were demonstrated on stage. The presenters also emphasized that the showcased rotations and actions are still in development and may change before launch."
+          "official": "The panel said all 21 jobs are receiving Evolve-mode designs, even though only a handful were demonstrated on stage. The presenters also emphasized that the showcased rotations and actions are still in development and may change before launch.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion's read was that the team wanted viewers to judge the direction of the redesign, not lock every animation and potency into place this early."
+          }
         }
       ]
     },
@@ -51,27 +66,35 @@
       "points": [
         {
           "title": "Paladin turns mitigation reads into counter-attack pressure",
-          "text": "Paladin's Evolve-mode footage pointed toward a more reactive tank loop, with Holy Sheltron timing feeding into counterattack payoffs and context-sensitive actions such as Provoke, Shield Lob, and the gap closer shifting based on whether Paladin is engaging an enemy or protecting an ally.",
-          "commentary": "Rion's main takeaway was that this could become Paladin's defining skill test: a tank that converts defensive timing reads into offensive reward instead of treating mitigation and damage as separate jobs.",
-          "commentaryLabel": "Rion observes"
+          "official": "Paladin's Evolve-mode footage pointed toward a more reactive tank loop, with Holy Sheltron timing feeding into counterattack payoffs and context-sensitive actions such as Provoke, Shield Lob, and the gap closer shifting based on whether Paladin is engaging an enemy or protecting an ally.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion highlighted this as a possible identity-defining skill test: Paladin may finally convert defensive timing reads into offensive reward instead of treating mitigation and damage as separate jobs."
+          }
         },
         {
           "title": "Dragoon leans harder into jumps and cleaner flow",
-          "text": "The team said Dragoon's Evolve mode was built around its signature jump attacks and improved Blood of the Dragon handling so the job feels slicker and tighter. They also noted that, like Paladin, Dragoon had action bloat that they intentionally reduced during the redesign.",
-          "commentary": "Rion argued the positional rework is the real headline: if the left-right-back split survives to launch, it gives Dragoon a baseline identity he called genuinely unique instead of just another melee sharing the same flank-versus-rear language.",
-          "commentaryLabel": "Rion observes"
+          "official": "The team said Dragoon's Evolve mode was built around its signature jump attacks and improved Blood of the Dragon handling so the job feels slicker and tighter. They also said Dragoon, like Paladin, had action bloat that they intentionally reduced during the redesign.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion argued the positional rework could be the real headline: if the left-right-back split survives to launch, Dragoon may regain a baseline identity that feels genuinely distinct instead of sharing the same positional language as every other melee."
+          }
         },
         {
           "title": "White Mage turns healing into active offensive value",
-          "text": "White Mage gained a Sanctuary Gauge that fills through healing and can be spent on Holy Sanctuary for damage, directly addressing the old tension where GCD healing felt like a DPS loss. The panel also described instant basic attack spells, combo variation on repeated casts, consolidated tools, and mobility help so healer fundamentals are easier to learn without losing offensive tempo.",
-          "commentary": "Rion called White Mage the least convincing showing of the panel. He understood the appeal of a deliberately approachable healer, but hopes that simplicity stays specific to White Mage and the other healers keep far more texture and decision-making.",
-          "commentaryLabel": "Rion observes"
+          "official": "White Mage gained a Sanctuary Gauge that fills through healing and can be spent on Holy Sanctuary for damage. The panel also described instant basic attack spells, combo variation on repeated casts, consolidated tools, and mobility help.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion saw the design goal clearly, but came away cautious: he hopes the intentionally approachable White Mage kit stays specific to White Mage and does not flatten the rest of the healer roster."
+          }
         },
         {
           "title": "Bard is being rebuilt around flexible song choice",
-          "text": "Bard's Evolve mode uses a performance gauge to spend songs in whatever order best fits the encounter, with each song granting a different party utility and unlocking different follow-up actions. The result is a support job that still helps the party, but decides its sequencing based on the fight instead of following one static script every pull.",
-          "commentary": "Rion zeroed in on Wanderer's Volley as the kind of addition that could make Bard feel faster and freer in real play: a three-charge directional gap closer that doubles as damage, alongside a song system that looks less locked to one script.",
-          "commentaryLabel": "Rion observes"
+          "official": "Bard's Evolve mode uses a performance gauge to spend songs in whatever order best fits the encounter, with each song granting different party utility and different follow-up actions.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion zeroed in on Wanderer's Volley and the freer song sequencing as signs Bard may finally feel fast and encounter-reactive instead of locked to one support script every pull."
+          }
         }
       ]
     },
@@ -81,15 +104,27 @@
       "points": [
         {
           "title": "Most party attack-buff synergies are going away",
-          "text": "The panel said most synergy actions that exist mainly to raise party attack will be removed or have their effects changed in both modes. The developers made it clear that this is one of Evercold's central battle-system decisions, not a small balance pass."
+          "official": "The panel said most synergy actions that exist mainly to raise party attack will be removed or have their effects changed in both modes. The developers presented this as one of Evercold's central battle-system decisions, not a small balance pass.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion treated this as the biggest systems-level change in the panel because it directly attacks the two-minute burst structure that has flattened job expression."
+          }
         },
         {
           "title": "The current system was limiting both players and encounter design",
-          "text": "Tamaki and Yoshida explained that synergy actions force too many jobs into rigid 120-second cycles, punish the whole party when one rotation goes wrong, and make bosses feel built around burst windows instead of more natural pacing. They also said those restrictions have made it harder to give jobs stronger individuality without causing balance problems."
+          "official": "Tamaki and Yoshida said synergy actions force too many jobs into rigid 120-second cycles, punish the entire party when one rotation goes wrong, and make bosses feel built around burst windows instead of more natural pacing.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion's takeaway was that the team finally said the quiet part out loud: encounter design and job design have both been boxed in by the same burst-timeline problem."
+          }
         },
         {
           "title": "Support flavor can remain without locking rotations",
-          "text": "The team noted that some jobs, especially support-oriented ones, can still keep utility that reinforces their personality. The key difference is that those tools should no longer dictate one mandatory party timeline every two minutes."
+          "official": "The panel noted that some jobs, especially support-oriented ones, can still keep utility that reinforces their personality. The stated goal is to remove the mandatory shared timeline, not erase support flavor altogether.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion read this as reassurance for support players: utility is staying, but its job should be identity and decision-making rather than forcing every comp into the same burst script."
+          }
         }
       ]
     },
@@ -99,15 +134,27 @@
       "points": [
         {
           "title": "Core hotbars should be complete by level 50",
-          "text": "The plan is for each Evolve-mode job to have its necessary core actions in place by around level 50. After that point, progression will mostly modify existing buttons through added effects or derivative actions instead of endlessly adding brand-new slots."
+          "official": "The plan is for each Evolve-mode job to have its necessary core actions in place by around level 50. After that point, progression will mostly modify existing buttons through added effects or derivative actions instead of endlessly adding brand-new slots.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion highlighted this as a practical onboarding fix: players should understand what a job really is much earlier instead of waiting until late expansion levels."
+          }
         },
         {
           "title": "Level sync and job onboarding should feel less stripped down",
-          "text": "Because the full loop arrives earlier, lower-level synced duties should no longer make jobs feel as empty or overly simplified. The presenters specifically said this approach should make it easier for players to understand the difference between Reborn and Evolve modes much earlier."
+          "official": "Because the full loop arrives earlier, the presenters said lower-level synced duties should no longer make jobs feel as empty or overly simplified. They also said this should make the difference between Reborn and Evolve clearer much sooner.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion's read was that the team is trying to make job-swapping and returning to older content feel less punishing for anyone learning multiple roles."
+          }
         },
         {
           "title": "Button count and icon density are being reduced",
-          "text": "The panel said Evolve mode significantly cuts down the number of button presses and visible icons so the new play styles are easier to grasp. That simplification is meant to encourage players to branch out into more jobs for more duties, not lock them into a single comfort pick forever."
+          "official": "The panel said Evolve mode significantly cuts down the number of button presses and visible icons so the new play styles are easier to grasp.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion connected that reduction to the team's role-flexibility goal: if jobs are easier to read at a glance, players are more likely to branch out into more duties and role swaps."
+          }
         }
       ]
     },
@@ -117,22 +164,30 @@
       "points": [
         {
           "title": "Main tanks and off tanks will have distinct specialties",
-          "text": "Main tanks are being positioned around mitigation and counterplay, while off tanks are leaning more into ally protection and enemy attack reduction. The panel specifically said Paladin and Evercold's new 8.0 tank will sit on the main-tank side of that split.",
-          "commentary": "Rion treated this as one of the clearest systemic reveals of the panel: Paladin and the new job on one side, Warrior, Dark Knight, and Gunbreaker on the other, which makes the role split feel structurally real rather than a vague design pitch.",
-          "commentaryLabel": "Rion observes"
+          "official": "Main tanks are being positioned around mitigation and counterplay, while off tanks lean more into ally protection and enemy attack reduction. The panel specifically said Paladin and Evercold's new 8.0 tank will sit on the main-tank side of that split.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion treated this as one of the clearest systemic reveals of the panel: the split feels structurally real rather than like a vague design pitch about tank identity."
+          }
         },
         {
           "title": "High-end groups can optimize the pairing, but regular content should stay flexible",
-          "text": "The explanation compared the concept to pure and barrier healers: the distinction matters, but parties are not supposed to feel blocked from clearing normal content because they picked the wrong subtype. Savage and Ultimate groups, however, should be able to squeeze more value from bringing both specialties together.",
-          "commentary": "Rion's support here was conditional. In theory, he can get behind the distinction if it sharpens tank identity without turning ordinary duties into composition checks, but he still wants to see how tightly encounter design will lean on the split.",
-          "commentaryLabel": "Rion observes"
+          "official": "The explanation compared the concept to pure and barrier healers: the distinction matters, but parties are not supposed to feel blocked from clearing normal content because they picked the wrong subtype. Savage and Ultimate groups, however, should be able to squeeze more value from bringing both specialties together.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion was cautiously on board with the idea as long as encounter design uses the split to sharpen identity without turning ordinary duties into composition checks."
+          }
         },
         {
           "title": "8.0 is only the beginning of battle changes",
-          "text": "The presenters closed by saying Evercold is the start of a longer battle-system evolution rather than the finish line. Their stated aim is to keep refining the system after 8.0 so encounters, jobs, and player choices stay interesting for years to come."
+          "official": "The presenters closed by saying Evercold is the start of a longer battle-system evolution rather than the finish line. Their stated aim is to keep refining the system after 8.0 so encounters, jobs, and player choices stay interesting over time.",
+          "commentary": {
+            "source": "Rion (YouTube)",
+            "takeaway": "Rion framed that as a signal that the team does not see 8.0 as a one-patch reset; they expect to keep iterating if the new structure opens more room for job identity."
+          }
         }
       ]
     }
   ],
-  "sourceNote": "Condensed from the translated development panel transcript and cross-checked against the clearer panel sections in the full YouTube transcript. Several showcased actions were described on stage as still in development. Analysis sourced from Rion's YouTube video: https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+  "sourceNote": "Official panel information is summarized from the translated development panel transcript. Any extra framing is explicitly labeled as Rion commentary so readers can separate on-stage statements from outside analysis. Commentary source: https://www.youtube.com/watch?v=pQZEOF6WYJ4"
 }
