@@ -1453,6 +1453,98 @@ select {
   padding: clamp(1.5rem, 4vw, 3rem) 0 4rem;
 }
 
+.summary-video-callout {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  overflow: hidden;
+}
+
+.summary-video-callout__header {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.summary-video-callout__header h2 {
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.summary-video-callout__copy,
+.summary-video-callout__caption {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+.summary-video-callout__frame-wrap {
+  position: relative;
+}
+
+.summary-video-callout__frame-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem 12% auto;
+  height: 7rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(126, 200, 227, 0.28), transparent 72%);
+  filter: blur(18px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.summary-video-callout__frame-shell {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(168, 216, 234, 0.18);
+  border-radius: calc(var(--radius-xl) - 6px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02) 28%),
+    linear-gradient(135deg, rgba(8, 28, 48, 0.96), rgba(17, 53, 82, 0.92));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 22px 48px rgba(0, 0, 0, 0.28);
+  isolation: isolate;
+}
+
+.summary-video-callout__frame-shell::before,
+.summary-video-callout__frame-shell::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.summary-video-callout__frame-shell::before {
+  inset: 0;
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.12), transparent 18%),
+    linear-gradient(35deg, transparent 0 64%, rgba(168, 216, 234, 0.14) 64% 71%, transparent 71%);
+  mix-blend-mode: screen;
+  opacity: 0.72;
+}
+
+.summary-video-callout__frame-shell::after {
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 216, 234, 0.78), transparent);
+}
+
+.summary-video-callout__frame-shell iframe {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+}
+
+.summary-video-callout__caption {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
 .summary-stack {
   display: grid;
   gap: 1.5rem;
@@ -1827,6 +1919,10 @@ body.is-ready .panel:nth-of-type(2) {
   .summary-hero__grid {
     grid-template-columns: 1fr;
   }
+
+  .summary-video-callout {
+    margin-top: 1.25rem;
+  }
 }
 
 @media (max-width: 540px) {
@@ -1842,6 +1938,10 @@ body.is-ready .panel:nth-of-type(2) {
 
   .summary-main {
     width: min(100% - 1rem, var(--max-width));
+  }
+
+  .summary-video-callout__frame-shell {
+    border-radius: var(--radius-lg);
   }
 
   .hero h1 {
