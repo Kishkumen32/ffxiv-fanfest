@@ -57,6 +57,12 @@ News entries are sourced from:
 
 All entries include sentiment tags and source URLs where applicable.
 
+### Official vs creator commentary
+
+- `devpanel_summary.json` keeps **official** Fanfest panel/keynote information in dedicated `official` fields.
+- Outside analysis from Rion, Xenosys Vex, and Arthars is stored separately as **creator commentary** and rendered in distinct amber commentary blocks.
+- The dev panel page embeds creator videos for context, but those videos are explicitly presented as commentary rather than Square Enix source material.
+
 ## Development
 
 This is a static HTML/CSS/JS site with no build step. To run locally:

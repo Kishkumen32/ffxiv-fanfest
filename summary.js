@@ -84,17 +84,67 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   };
 
-  const renderCommentary = (commentary, label = 'Commentary') => {
+  const renderCommentaryBlock = (commentary, fallbackLabel = 'Creator commentary') => {
     if (!commentary) {
       return '';
     }
 
+    if (typeof commentary === 'string') {
+      return `
+        <div class="summary-attribution-block summary-attribution-block--commentary">
+          <p class="summary-attribution-label">${escapeHtml(fallbackLabel)}</p>
+          <p>${escapeHtml(commentary)}</p>
+        </div>
+      `;
+    }
+
+    const commentaryLabel = commentary.label || fallbackLabel;
+    const commentarySource = commentary.source
+      ? `<p class="summary-attribution-source">${escapeHtml(commentary.source)}</p>`
+      : '';
+    const commentaryQuote = commentary.quote
+      ? `<blockquote class="summary-commentary-quote">${escapeHtml(commentary.quote)}</blockquote>`
+      : '';
+    const commentaryTakeaway = commentary.takeaway
+      ? `<p>${escapeHtml(commentary.takeaway)}</p>`
+      : '';
+
     return `
-      <aside class="summary-commentary" aria-label="${escapeHtml(label)}">
-        <p class="summary-commentary__label">${escapeHtml(label)}</p>
-        <p>${escapeHtml(commentary)}</p>
-      </aside>
+      <div class="summary-attribution-block summary-attribution-block--commentary">
+        <p class="summary-attribution-label">${escapeHtml(commentaryLabel)}</p>
+        ${commentarySource}
+        ${commentaryQuote}
+        ${commentaryTakeaway}
+      </div>
     `;
+  };
+
+  const renderHeroCommentaries = (commentary, label = 'Commentary') => {
+    const commentaryItems = Array.isArray(commentary)
+      ? commentary
+      : commentary
+        ? [{ label, takeaway: commentary }]
+        : [];
+
+    if (!commentaryItems.length) {
+      return '';
+    }
+
+    const items = commentaryItems
+      .map((item) => {
+        const itemLabel = typeof item === 'string' ? label : (item.label || label);
+        const itemText = typeof item === 'string' ? item : item.takeaway;
+
+        return `
+          <aside class="summary-commentary" aria-label="${escapeHtml(itemLabel)}">
+            <p class="summary-commentary__label">${escapeHtml(itemLabel)}</p>
+            <p>${escapeHtml(itemText)}</p>
+          </aside>
+        `;
+      })
+      .join('');
+
+    return `<div class="summary-commentary-stack">${items}</div>`;
   };
 
   const renderPoints = (points) => {
@@ -105,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = points
       .map((point) => {
         const hasAttributedContent = Boolean(
-          point.official || point.panelNote || point.commentary || point.rionCommentary || point.commentaryLabel
+          point.official || point.panelNote || point.commentary || point.commentaries || point.rionCommentary || point.commentaryLabel
         );
 
         if (!hasAttributedContent) {
@@ -118,29 +168,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const officialText = point.official || point.panelNote || point.text || '';
-        const commentary = point.commentary || point.rionCommentary || null;
-        const commentaryLabel = typeof commentary === 'string' ? (point.commentaryLabel || 'Rion commentary') : 'Rion commentary';
-        const commentarySource = commentary && typeof commentary === 'object' && commentary.source
-          ? `<p class="summary-attribution-source">${escapeHtml(commentary.source)}</p>`
-          : '';
-        const commentaryQuote = commentary && typeof commentary === 'object' && commentary.quote
-          ? `<blockquote class="summary-commentary-quote">${escapeHtml(commentary.quote)}</blockquote>`
-          : '';
-        const commentaryTakeaway = typeof commentary === 'string'
-          ? `<p>${escapeHtml(commentary)}</p>`
-          : commentary?.takeaway
-            ? `<p>${escapeHtml(commentary.takeaway)}</p>`
-            : '';
-        const commentaryBlock = commentary
-          ? `
-            <div class="summary-attribution-block summary-attribution-block--commentary">
-              <p class="summary-attribution-label">${escapeHtml(commentaryLabel)}</p>
-              ${commentarySource}
-              ${commentaryQuote}
-              ${commentaryTakeaway}
-            </div>
-          `
-          : '';
+        const commentaryItems = Array.isArray(point.commentaries)
+          ? point.commentaries
+          : point.commentary || point.rionCommentary
+            ? [point.commentary || point.rionCommentary]
+            : [];
+        const commentaryBlock = commentaryItems
+          .map((item) => renderCommentaryBlock(item, point.commentaryLabel || 'Creator commentary'))
+          .join('');
 
         return `
           <article class="summary-point-card">
@@ -165,8 +200,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const officialLabel = attribution.officialLabel || 'Official dev panel info';
     const officialSource = attribution.officialSource ? `<p>${escapeHtml(attribution.officialSource)}</p>` : '';
-    const commentaryLabel = attribution.commentaryLabel || 'Rion commentary';
-    const commentarySource = attribution.commentarySource ? `<p>${escapeHtml(attribution.commentarySource)}</p>` : '';
+    const commentaryLabel = attribution.commentaryLabel || 'Creator commentary';
+    const commentaryItems = Array.isArray(attribution.commentarySources)
+      ? attribution.commentarySources
+      : attribution.commentarySource
+        ? [attribution.commentarySource]
+        : [];
+    const commentarySource = commentaryItems.length
+      ? `<ul class="summary-source-list">${commentaryItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      : '';
     const note = attribution.note ? `<p>${escapeHtml(attribution.note)}</p>` : '';
 
     return `
@@ -176,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="eyebrow">Attribution</p>
             <h2 id="summary-attribution-title">How to read this page</h2>
           </div>
-          <p class="summary-section__summary">Official panel notes and Rion's commentary are rendered in separate, labeled blocks throughout the summary.</p>
+          <p class="summary-section__summary">Official panel notes and creator commentary are rendered in separate, labeled blocks throughout the summary.</p>
         </div>
         <div class="summary-point-grid">
           <article class="summary-point-card">
@@ -220,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="eyebrow">${escapeHtml(summary.eyebrow)}</p>
             <h1 id="summary-title">${escapeHtml(summary.title)}</h1>
             <p class="summary-hero__overview">${escapeHtml(summary.overview)}</p>
-            ${renderCommentary(summary.overviewCommentary, summary.overviewCommentaryLabel || 'Rion takeaway')}
+            ${renderHeroCommentaries(summary.overviewCommentaries || summary.overviewCommentary, summary.overviewCommentaryLabel || 'Creator takeaway')}
             ${renderTags(summary.tags)}
             ${renderStats(summary.stats)}
           </div>

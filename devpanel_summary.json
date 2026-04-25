@@ -3,14 +3,30 @@
   "eyebrow": "NA Fanfest 2026 · Development panel recap",
   "title": "Evercold development panel summary",
   "overview": "The development panel drilled into Evercold's battle overhaul and framed Evolve mode as a way to make jobs easier to pick up, more distinct to master, and less constrained by the current two-minute burst meta. The clearest takeaways centered on job identity, battle-system freedom, and a simpler on-ramp for swapping roles.",
-  "overviewCommentary": "Rion's broad read was that Evolved mode is clearly the future direction for XIV's combat, even if the team still has room to refine how aggressively that shift lands in 8.0.",
-  "overviewCommentaryLabel": "Rion takeaway",
+  "overviewCommentaries": [
+    {
+      "label": "Rion takeaway",
+      "takeaway": "Rion's broad read was that Evolved mode is clearly the future direction for XIV's combat, even if the team still has room to refine how aggressively that shift lands in 8.0."
+    },
+    {
+      "label": "Xenosys Vex takeaway",
+      "takeaway": "Xenosys Vex came away strongly positive on the broader Evercold reveal, calling it one of the best keynotes XIV has delivered in a while while immediately digging into the raid ladder and gearing implications."
+    },
+    {
+      "label": "Arthars takeaway",
+      "takeaway": "Arthars liked the colder, darker mood immediately and treated the teaser as a sharp tonal correction away from Dawntrail's lighter energy."
+    }
+  ],
   "attribution": {
     "officialLabel": "Official dev panel info",
     "officialSource": "Summarized from the translated NA Fanfest 2026 development panel transcript and on-stage statements.",
-    "commentaryLabel": "Rion commentary",
-    "commentarySource": "Rion (YouTube) — https://www.youtube.com/watch?v=pQZEOF6WYJ4. Used only when a point needs extra interpretation or framing beyond the official panel wording.",
-    "note": "If a card does not include a Rion commentary block, treat it as official panel information only."
+    "commentaryLabel": "Creator commentary",
+    "commentarySources": [
+      "Rion (YouTube) — https://www.youtube.com/watch?v=pQZEOF6WYJ4",
+      "Xenosys Vex (YouTube) — https://www.youtube.com/watch?v=KF8xWrDWEK8",
+      "Arthars (YouTube) — https://www.youtube.com/watch?v=UoPeyBNG3_s"
+    ],
+    "note": "Amber commentary blocks are creator analysis, not official panel wording. If a card only shows the blue official block, treat it as transcript-backed panel information only."
   },
   "tags": [
     "Battle overhaul",
@@ -29,12 +45,12 @@
       "value": "Dev panel transcript"
     },
     {
-      "label": "Commentary source",
-      "value": "Rion (YouTube)"
+      "label": "Commentary sources",
+      "value": "3 creator videos"
     },
     {
       "label": "Topic clusters",
-      "value": "5 sections"
+      "value": "6 sections"
     }
   ],
   "sections": [
@@ -187,7 +203,71 @@
           }
         }
       ]
+    },
+    {
+      "title": "Creator reactions broadened the dev-panel conversation",
+      "summary": "These creator takes are not official panel statements. They are clearly labeled reactions to the keynote, teaser trailer, and dev-panel direction so readers can separate transcript-backed facts from outside analysis.",
+      "points": [
+        {
+          "title": "The darker Evercold tone landed as a major course correction",
+          "official": "The official Evercold reveal paired the Fourth's frozen setting with a colder, darker visual palette and positioned 8.0 as a clear break from recent expansion mood and structure.",
+          "commentaries": [
+            {
+              "label": "Arthars commentary",
+              "source": "Arthars (YouTube)",
+              "quote": "This is not going to be like Dawntrail.",
+              "takeaway": "Arthars said the teaser carried strong Shadowbringers vibes and explicitly liked the title, the cold theme, and the fact that Evercold looked darker than the recent 'happy, lucky' expansion tone."
+            },
+            {
+              "label": "Xenosys Vex commentary",
+              "source": "Xenosys Vex (YouTube)",
+              "quote": "One of the best keynotes I've seen in a while.",
+              "takeaway": "Xenosys Vex treated the dark / cold theme as a straight win and framed the broader reveal cadence as one of the strongest first-showing keynotes the game has had in years."
+            }
+          ]
+        },
+        {
+          "title": "Release timing and the mode reset changed expectations immediately",
+          "official": "The official reveal locked Evercold to January 2027 and introduced Reborn plus Evolve as the expansion's new battle framework, signaling that 8.0 is meant to feel structurally different from recent expansions.",
+          "commentaries": [
+            {
+              "label": "Arthars commentary",
+              "source": "Arthars (YouTube)",
+              "quote": "January is way earlier than expected.",
+              "takeaway": "Arthars said the release target landed roughly two months earlier than he expected and read it as a possible sign the team is finally trying to speed up the expansion cycle."
+            },
+            {
+              "label": "Xenosys Vex commentary",
+              "source": "Xenosys Vex (YouTube)",
+              "takeaway": "Xenosys Vex's early read was that Reborn and Evolve may create a split similar to a WoW-style easier baseline rotation versus a more involved mode, which made him immediately question how much complexity each job will ultimately keep."
+            }
+          ]
+        },
+        {
+          "title": "Raid structure, gearing, and the unrevealed tank became instant creator talking points",
+          "official": "The broader official reveal introduced a new midcore raid tier, previewed armory changes that let a character's highest item level help other jobs, and left some battle-content details—such as future Chaotic or Ultimate cadence and the exact 8.0 tank weapon concept—unannounced.",
+          "commentaries": [
+            {
+              "label": "Xenosys Vex commentary",
+              "source": "Xenosys Vex (YouTube)",
+              "quote": "Three different tiers is very good.",
+              "takeaway": "Xenosys Vex liked the new mid-tier raid immediately, pushed back on the 'only 1% do Savage' framing, called the highest-item-level armory change 'insane,' and started asking practical follow-up questions about whether the mid-tier reward track will sit about ten item levels below top-end gear."
+            },
+            {
+              "label": "Xenosys Vex commentary",
+              "source": "Xenosys Vex (YouTube)",
+              "takeaway": "He also flagged what was still missing from the reveal: no newly announced Chaotic or Ultimate yet, plus open-ended speculation that the 8.0 main tank could still land somewhere between a hammer user and a dual-shield concept."
+            },
+            {
+              "label": "Arthars commentary",
+              "source": "Arthars (YouTube)",
+              "quote": "Reaper is in there, job is gonna get fucked.",
+              "takeaway": "Arthars mostly stayed on teaser-trailer tone, but still zeroed in on job-signaling imagery like Reaper's appearance as the sort of clue that makes balance and rework speculation explode instantly."
+            }
+          ]
+        }
+      ]
     }
   ],
-  "sourceNote": "Official panel information is summarized from the translated development panel transcript. Any extra framing is explicitly labeled as Rion commentary so readers can separate on-stage statements from outside analysis. Commentary source: https://www.youtube.com/watch?v=pQZEOF6WYJ4"
+  "sourceNote": "Official panel information is summarized from the translated development panel transcript plus clearly identified official keynote reveal context where noted. Any amber creator blocks are explicitly labeled commentary from Rion, Xenosys Vex, or Arthars so readers can separate official statements from outside analysis."
 }
