@@ -3,7 +3,7 @@
   "eyebrow": "NA Fanfest 2026 · Development panel recap",
   "title": "Evercold development panel summary",
   "overview": "The development panel drilled into Evercold's battle overhaul and framed Evolve mode as a way to make jobs easier to pick up, more distinct to master, and less constrained by the current two-minute burst meta. The clearest takeaways centered on job identity, battle-system freedom, and a simpler on-ramp for swapping roles.",
-  "overviewCommentaries": [
+"overviewCommentaries": [
     {
       "label": "Rion takeaway",
       "takeaway": "Rion's broad read was that Evolved mode is clearly the future direction for XIV's combat, even if the team still has room to refine how aggressively that shift lands in 8.0."
@@ -15,16 +15,26 @@
     {
       "label": "Arthars takeaway",
       "takeaway": "Arthars liked the colder, darker mood immediately and treated the teaser as a sharp tonal correction away from Dawntrail's lighter energy."
+    },
+    {
+      "label": "Jesse Cox takeaway",
+      "takeaway": "Cox captured the raw audience energy live — crowd erupted at the Evercold name reveal, Evangelion surprise, and January 2027 release date announcement. Peak 'We win!' moments timestamped around 3:14-3:26 into the video."
+    },
+    {
+      "label": "Mrhappy1227 takeaway",
+      "takeaway": "Mrhappy's compilation shows crowd reaction progression — initial 'Look at his cloak!' comments at visual reveals, building to peak eruption around 3:14-3:26 with sustained 'We win!' chants. Evangelion crossover drew the biggest sustained reaction."
     }
   ],
   "attribution": {
     "officialLabel": "Official dev panel info",
     "officialSource": "Summarized from the translated NA Fanfest 2026 development panel transcript and on-stage statements.",
     "commentaryLabel": "Creator commentary",
-    "commentarySources": [
+"commentarySources": [
       "Rion (YouTube) — https://www.youtube.com/watch?v=pQZEOF6WYJ4",
       "Xenosys Vex (YouTube) — https://www.youtube.com/watch?v=KF8xWrDWEK8",
-      "Arthars (YouTube) — https://www.youtube.com/watch?v=UoPeyBNG3_s"
+      "Arthars (YouTube) — https://www.youtube.com/watch?v=UoPeyBNG3_s",
+      "Jesse Cox (YouTube) — https://www.youtube.com/watch?v=jtFTNloka-c",
+      "Mrhappy1227 (YouTube) — https://www.youtube.com/watch?v=sjydQ56wXqg"
     ],
     "note": "Amber commentary blocks are creator analysis, not official panel wording. If a card only shows the blue official block, treat it as transcript-backed panel information only."
   },
