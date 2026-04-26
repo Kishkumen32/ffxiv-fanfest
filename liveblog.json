@@ -449,7 +449,7 @@
       ]
     },
     {
-      "id": "character-creation-expansion",
+"id": "character-creation-expansion",
       "region": "na",
       "timestamp": "2026-04-24T19:00:00Z",
       "headline": "Character Creation Expansion: Neon Hair & Face Paint",
@@ -460,51 +460,7 @@
       ]
     },
     {
-      "id": "yoshi-p-keynote-transcript",
-      "region": "na",
-      "timestamp": "2026-04-24T19:20:00Z",
-      "headline": "[TRANSCRIPT] Yoshi-P Full Keynote - Daily→Weekly Evolution",
-      "body": "Complete transcript of Yoshi-P's NA Fanfest 2026 keynote (85 minutes) revealing Evercold's major system changes. Key quotes:\n\nYoshi-P (via Koji Fox): 'We're going to change the daily concept of the game. We're going to change the design of the game weekly.'\n\nOn Adventurer Activity: 'The idea is that from this screen here, Warriors of Light will be able to manage their character growth, their gear upgrades, their duty progression, their weekly progress and more all from this screen.'\n\nOn weekly rollover: 'We're considering adding a feature that allows you to earn any unearned points from one week prior, as long as you've earned all your points from this week.'\n\nFull transcript available with 553 segments covering all announcements.",
-      "sentiment": "positive",
-      "sources": [
-        "https://www.twitch.tv/videos/2755929682"
-      ]
-    },
-    {
-      "id": "daily-to-weekly-evolution",
-      "region": "na",
-      "timestamp": "2026-04-24T19:25:00Z",
-      "headline": "Adventurer Activity: Daily→Weekly System Evolution",
-      "body": "Yoshi-P revealed the biggest quality-of-life change in FFXIV history: the Daily Duty Roulette system is evolving into 'Adventurer Activity' - a weekly progression system.\n\n**Key Details:**\n- Complete weekly missions to earn Activity Points\n- Points raise Activity Level, unlocking gear and rewards\n- Points can be earned from multiple sources (MSQ, duties, repeatable missions)\n- Missed points from last week can be earned by completing current week's points first\n- Designed to reduce FOMO and allow flexible play schedules\n\nYoshi-P: 'Do you want to log in a little bit each day? That's fine. Do you want to take off the weekdays, and then maybe come in and focus on weeks worth of play on Saturday and Sunday? That's fine too.'",
-      "sentiment": "positive",
-      "sources": [
-        "https://www.twitch.tv/videos/2755929682"
-      ]
-    },
-    {
-      "id": "season-system-revealed",
-      "region": "na",
-      "timestamp": "2026-04-24T19:30:00Z",
-      "headline": "New Season System: Two Patches = One Season",
-      "body": "Evercold introduces Seasons - a new way to structure major content releases.\n\n**How it works:**\n- Two patches (even + odd) form one Season\n- .0 and .1 patches together = Season 1\n- .2 and .3 patches together = Season 2, etc.\n- Provides clearer content grouping for players\n- Seasons will have themes and focused content drops\n\nThis system helps organize the expansion lifecycle and gives players a better sense of progression through Evercold's content.",
-      "sentiment": "positive",
-      "sources": [
-        "https://www.twitch.tv/videos/2755929682"
-      ]
-    },
-    {
-      "id": "new-cat-race-teased",
-      "region": "na",
-      "timestamp": "2026-04-24T19:35:00Z",
-      "headline": "New Race Teased: Cat-like NPCs on the Fourth",
-      "body": "Yoshi-P teased a new race with cat-like features during the concept art showcase.\n\n**Key Moments:**\n- Yoshi-P: 'Is that a cat? Is that a kitty?'\n- Koji Fox: 'That looks like one of our new races that we're gonna meet on the 4th'\n- Art shows cat-like humanoid NPCs in town settings\n- Yoshi-P confirmed: 'That is definitely a cat'\n\nNot confirmed as playable yet, but will be major NPCs in Evercold.",
-      "sentiment": "positive",
-      "sources": [
-        "https://www.twitch.tv/videos/2755929682"
-      ]
-    },
-    {
-      "id": "character-creation-expansion",
+      "id": "character-creation-expansion-facial-features",
       "region": "na",
       "timestamp": "2026-04-24T19:40:00Z",
       "headline": "Character Creation Expanded: Eye Color, Face Paint Layers",
