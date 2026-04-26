@@ -1,7 +1,66 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-26T07:00:00Z",
+  "updatedAt": "2026-04-26T16:00:00Z",
   "entries": [
+    {
+      "id": "evangelion-press-community-split",
+      "region": "general",
+      "timestamp": "2026-04-26T16:00:00Z",
+      "headline": "Evangelion Crossover Divides Opinion: Press Hails Bold Move, Community Questions Tone",
+      "body": "The Neon Genesis Evangelion \"Ghosts of Desire\" Alliance Raid generated the most coverage but split opinion. Press framed it as \"cultural collision\" and \"bold surprise.\" Community reactions mixed: \"i thought ff7 collab was the glass break option i did not consider neon genesis evangelion\" (388 votes). Some celebrate the iconic anime collab while others question how Evangelion's psychological depth fits FFXIV's fantasy setting. Yoshi-P, a self-described \"Evangelion otaku,\" promised to \"do right by this very unexpected crossover.\"",
+      "sentiment": "mixed",
+      "sources": [
+        "https://www.reddit.com/r/ffxiv/comments/1suomla/",
+        "https://screenrant.com/final-fantasy-14-evangelion-raids/"
+      ]
+    },
+    {
+      "id": "nintendo-tax-switch-2-controversy",
+      "region": "general",
+      "timestamp": "2026-04-26T15:00:00Z",
+      "headline": "Switch 2 'Nintendo Tax': Community Frustration Over Separate Subscription",
+      "body": "The Switch 2 version requiring a separate subscription (despite 50% discount for existing subscribers) has created community frustration. Dubbed \"Nintendo Tax\" on Reddit and forums, players express disappointment that cross-play doesn't extend to subscriptions. Yoshi-P explained this resulted from \"many months of discussion with Nintendo\" and the requirement exists regardless of Nintendo Switch Online subscription. Mitigation: existing players get 50% off the Switch 2 subscription.",
+      "sentiment": "negative",
+      "sources": [
+        "https://www.polygon.com/ffxiv-switch-2-release-date-extra-subscription/"
+      ]
+    },
+    {
+      "id": "community-evolved-mode-concerns-reddit",
+      "region": "general",
+      "timestamp": "2026-04-26T14:00:00Z",
+      "headline": "Reddit Community Questions Evolved Mode: 'Not an Easy Mode' Promise Scrutinized",
+      "body": "Reddit discussions reveal genuine concern from high-end players about Evolved Mode simplification. Top concerns: \"Having only a small handful of buttons that handle all of your actions and dynamically change based on what you're targeting just means that players no longer have to think about what they're doing.\" Yoshi-P cited Star Wars Galaxies as a cautionary tale for why Reborn Mode won't be removed. Community remains divided—some appreciate choice, while veteran raiders worry about job identity erosion. Forum thread \"Evolved Mode concerns\" generated significant engagement with valid criticism being raised.",
+      "sentiment": "mixed",
+      "sources": [
+        "https://forum.square-enix.com/ffxiv/threads/527767-Evolved-mode-concerns",
+        "https://www.pcgamesn.com/final-fantasy-14/ff14-evercold-evolved-mode-star-wars-galaxies"
+      ]
+    },
+    {
+      "id": "press-return-to-form-narrative",
+      "region": "general",
+      "timestamp": "2026-04-26T13:00:00Z",
+      "headline": "Press Frames Evercold as 'Return to Form' After Dawntrail",
+      "body": "Gaming press coverage positions Evercold as Square Enix responding to Dawntrail criticism. Polygon: \"long-requested improvements to item progression, expanded free trial, new combat mechanics.\" GamesRadar+: \"Evercold is expected to be a significant step forward... despite mixed reviews, fans believe Evercold will revitalize the game.\" Radio Times: \"Evercold is proof enough that Yoshi-P and his team are far from done with the game.\" Multiple outlets explicitly acknowledged Dawntrail's mixed reception while framing Evercold as potential redemption.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.polygon.com/ffxiv-2026-fan-fest-keynote-recap-evangelion-raid-free-trial/",
+        "https://www.gamesradar.com/games/final-fantasy/final-fantasy-14-evercold-is-the-mmos-next-big-expansion-and-its-coming-early-next-year/",
+        "https://www.radiotimes.com/technology/gaming/ff14-reveals-next-expansion-final-fantasy-xiv-evercold-newsupdate/"
+      ]
+    },
+    {
+      "id": "youtube-creator-reactions-metrics",
+      "region": "general",
+      "timestamp": "2026-04-26T12:00:00Z",
+      "headline": "YouTube Reaction Videos: Jesse Cox Leads with 39.4K Views",
+      "body": "Content creator reactions to Evercold announcement show strong engagement. Jesse Cox's live audience reaction video leads with 39.4K views and 2.1K likes (5.3% engagement rate). Mrhappy1227's crowd reaction compilation reached 19.8K views. Community sentiment on YouTube is overwhelmingly positive with reactions like \"OH YO! NEXT YEAR, BABY!\" and \"INSANE\" dominating comment sections. The Evangelion crossover and dark aesthetic drove the most excitement.",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      ]
+    },
     {
       "id": "rion-final-verdict-evolved-mode",
       "region": "general",
