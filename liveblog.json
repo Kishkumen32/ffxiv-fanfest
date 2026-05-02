@@ -1,7 +1,29 @@
 {
   "title": "FFXIV Fanfest 2026 Liveblog",
-  "updatedAt": "2026-04-26T16:00:00Z",
+  "updatedAt": "2026-05-02T12:00:00Z",
   "entries": [
+    {
+      "id": "arthars-keynote-game-changing",
+      "region": "general",
+      "timestamp": "2026-05-02T12:00:00Z",
+      "headline": "Arthars: 'We Are Going to Be Playing a Brand New Game'",
+      "body": "Arthars' hour-long live reaction to the NA Fanfest keynote treats the systemic overhaul as sweeping validation of creator criticism. 'It's like getting slapped by Yoshi-P,' he says, contrasting it with hearing similar critiques from content creators: 'Getting slapped by artists you are mad, getting slapped by Yoshi-P you're like Yoshi-P WHY.' He interprets Evolved Mode as effectively 21 new specs rather than an easy mode, predicting Reborn Mode will eventually be phased out as the team transitions players. His biggest concern is execution risk: 'If they implement all these changes and the game is buggy as [expletive] like the latest WoW patch... then people are gonna be like why do you change.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=aVUGr4S_iTs"
+      ]
+    },
+    {
+      "id": "arthars-evolved-mode-new-specs",
+      "region": "general",
+      "timestamp": "2026-05-02T11:30:00Z",
+      "headline": "Arthars: Evolved Mode Is 'Like a New Spec' for Every Job",
+      "body": "Arthars' read on the Reborn/Evolved system goes deeper than most creator reactions. He argues that Evolved Mode isn't a simplified version of existing rotations but a fundamentally different playstyle — 'it's like a new spec in the game.' He notes that Reborn Dragoon and Evolved Dragoon will share jump abilities and core identity but have completely different rotations. He predicts the team is using Reborn Mode as a transition bridge: 'They are slowly gonna transition you to the evolve mode... I'm pretty sure Reborn Mode will be gone' by 9.0. He also calls out the team's honesty about the game's stagnation: 'Most important thing is they know and they're finally acting on it.'",
+      "sentiment": "positive",
+      "sources": [
+        "https://www.youtube.com/watch?v=aVUGr4S_iTs"
+      ]
+    },
     {
       "id": "evangelion-press-community-split",
       "region": "general",
